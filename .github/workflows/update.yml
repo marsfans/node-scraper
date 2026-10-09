@@ -5,6 +5,12 @@ on:
     # GitHub 的 cron 用 UTC：00/04/10 UTC = 北京时间 08/12/18 点
     - cron: "0 0,4,10 * * *"
   workflow_dispatch:
+    inputs:
+      limit:
+        description: "节点数（定时任务固定 400）"
+        required: true
+        default: "400"
+        type: number
 
 permissions:
   contents: write
@@ -37,13 +43,19 @@ jobs:
           gunzip -f mihomo.gz && chmod +x mihomo && ./mihomo -v
 
       - name: Scrape & build
-        run: ./run.sh
+        env:
+          LIMIT: ${{ inputs.limit || 400 }}
+        run: |
+          echo "LIMIT=$LIMIT"
+          ./run.sh
 
       - name: Commit
+        env:
+          LIMIT: ${{ inputs.limit || 400 }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898299+github-actions[bot]@users.noreply.github.com"
           git add dist/clash.yaml
           if git diff --cached --quiet; then echo "no changes"; exit 0; fi
-          git commit -m "update nodes $(date '+%F %H:%M')"
+          git commit -m "update nodes $(date '+%F %H:%M') (limit $LIMIT)"
           git push
