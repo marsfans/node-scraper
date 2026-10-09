@@ -1,0 +1,458 @@
+mixed-port: 7890
+allow-lan: true
+mode: rule
+log-level: info
+proxies: []
+proxy-groups:
+- name: 自动选择
+  type: url-test
+  proxies: &id001
+  - 香港
+  - 台湾
+  - 新加坡
+  - 美国
+  - 韩国
+  - 日本
+  - 亚洲
+  - 欧洲
+  - 非洲
+  - 美洲
+  - 大洋洲
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+- name: 手动选择
+  type: select
+  proxies: *id001
+- name: 香港
+  type: url-test
+  include-all-proxies: true
+  filter: ^HK
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+- name: 台湾
+  type: url-test
+  include-all-proxies: true
+  filter: ^TW
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+- name: 新加坡
+  type: url-test
+  include-all-proxies: true
+  filter: ^SG
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+- name: 美国
+  type: url-test
+  include-all-proxies: true
+  filter: ^US
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+- name: 韩国
+  type: url-test
+  include-all-proxies: true
+  filter: ^KR
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+- name: 日本
+  type: url-test
+  include-all-proxies: true
+  filter: ^JP
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+- name: 亚洲
+  type: url-test
+  include-all-proxies: true
+  filter: ^(AE|AF|AM|AZ|BD|BH|BN|BT|CN|GE|ID|IL|IN|IQ|IR|JO|KG|KH|KP|KW|KZ|LA|LB|LK|MM|MN|MO|MV|MY|NP|OM|PH|PK|PS|QA|SA|SY|TH|TJ|TM|TR|UZ|VN|YE)
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+- name: 欧洲
+  type: url-test
+  include-all-proxies: true
+  filter: ^(AD|AL|AT|AX|BA|BE|BG|BY|CH|CY|CZ|DE|DK|EE|ES|FI|FR|GB|GI|GR|HR|HU|IE|IM|IS|IT|LI|LT|LU|LV|MC|MD|ME|MK|MT|NL|NO|PL|PT|RO|RS|RU|SE|SI|SK|SM|UA|VA)
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+- name: 非洲
+  type: url-test
+  include-all-proxies: true
+  filter: ^(AO|BF|BI|BJ|BW|CD|CF|CG|CI|CM|CV|DJ|DZ|EG|EH|ER|ET|GA|GH|GM|GN|GQ|GW|KE|KM|LR|LS|LY|MA|MG|ML|MR|MU|MW|MZ|NA|NE|NG|RW|SC|SD|SL|SN|SO|SS|ST|SZ|TD|TG|TN|TZ|UG|ZA|ZM|ZW)
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+- name: 美洲
+  type: url-test
+  include-all-proxies: true
+  filter: ^(AG|AR|AW|BB|BM|BO|BQ|BR|BS|BZ|CA|CL|CO|CR|CU|CW|DM|DO|EC|FK|GD|GL|GP|GT|GY|HN|HT|JM|KN|LC|MQ|MX|NI|PA|PE|PR|PY|SR|SV|TT|UY|VC|VE)
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+- name: 大洋洲
+  type: url-test
+  include-all-proxies: true
+  filter: ^(AU|CK|FJ|FM|GU|KI|MH|NC|NR|NU|NZ|PF|PG|PW|SB|TK|TO|TV|VU|WF|WS)
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+- name: YouTube
+  type: select
+  proxies:
+  - 香港
+  - 台湾
+  - 新加坡
+  - 美国
+  - 韩国
+  - 日本
+  - 亚洲
+  - 欧洲
+  - 非洲
+  - 美洲
+  - 大洋洲
+  - DIRECT
+- name: Facebook
+  type: select
+  proxies:
+  - 香港
+  - 台湾
+  - 新加坡
+  - 美国
+  - 韩国
+  - 日本
+  - 亚洲
+  - 欧洲
+  - 非洲
+  - 美洲
+  - 大洋洲
+  - DIRECT
+- name: AI
+  type: select
+  proxies:
+  - 香港
+  - 台湾
+  - 新加坡
+  - 美国
+  - 韩国
+  - 日本
+  - 亚洲
+  - 欧洲
+  - 非洲
+  - 美洲
+  - 大洋洲
+  - DIRECT
+- name: Google
+  type: select
+  proxies:
+  - 香港
+  - 台湾
+  - 新加坡
+  - 美国
+  - 韩国
+  - 日本
+  - 亚洲
+  - 欧洲
+  - 非洲
+  - 美洲
+  - 大洋洲
+  - DIRECT
+- name: X
+  type: select
+  proxies:
+  - 香港
+  - 台湾
+  - 新加坡
+  - 美国
+  - 韩国
+  - 日本
+  - 亚洲
+  - 欧洲
+  - 非洲
+  - 美洲
+  - 大洋洲
+  - DIRECT
+- name: Instagram
+  type: select
+  proxies:
+  - 香港
+  - 台湾
+  - 新加坡
+  - 美国
+  - 韩国
+  - 日本
+  - 亚洲
+  - 欧洲
+  - 非洲
+  - 美洲
+  - 大洋洲
+  - DIRECT
+- name: Cloudflare
+  type: select
+  proxies:
+  - 香港
+  - 台湾
+  - 新加坡
+  - 美国
+  - 韩国
+  - 日本
+  - 亚洲
+  - 欧洲
+  - 非洲
+  - 美洲
+  - 大洋洲
+  - DIRECT
+- name: GitHub
+  type: select
+  proxies:
+  - 香港
+  - 台湾
+  - 新加坡
+  - 美国
+  - 韩国
+  - 日本
+  - 亚洲
+  - 欧洲
+  - 非洲
+  - 美洲
+  - 大洋洲
+  - DIRECT
+- name: Telegram
+  type: select
+  proxies:
+  - 香港
+  - 台湾
+  - 新加坡
+  - 美国
+  - 韩国
+  - 日本
+  - 亚洲
+  - 欧洲
+  - 非洲
+  - 美洲
+  - 大洋洲
+  - DIRECT
+- name: Spotify
+  type: select
+  proxies:
+  - 香港
+  - 台湾
+  - 新加坡
+  - 美国
+  - 韩国
+  - 日本
+  - 亚洲
+  - 欧洲
+  - 非洲
+  - 美洲
+  - 大洋洲
+  - DIRECT
+- name: Disney+
+  type: select
+  proxies:
+  - 香港
+  - 台湾
+  - 新加坡
+  - 美国
+  - 韩国
+  - 日本
+  - 亚洲
+  - 欧洲
+  - 非洲
+  - 美洲
+  - 大洋洲
+  - DIRECT
+- name: Netflix
+  type: select
+  proxies:
+  - 香港
+  - 台湾
+  - 新加坡
+  - 美国
+  - 韩国
+  - 日本
+  - 亚洲
+  - 欧洲
+  - 非洲
+  - 美洲
+  - 大洋洲
+  - DIRECT
+- name: Apple
+  type: select
+  proxies:
+  - 香港
+  - 台湾
+  - 新加坡
+  - 美国
+  - 韩国
+  - 日本
+  - 亚洲
+  - 欧洲
+  - 非洲
+  - 美洲
+  - 大洋洲
+  - DIRECT
+rule-providers:
+  x:
+    type: http
+    behavior: domain
+    format: mrs
+    url: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/x.mrs
+    path: ./ruleset/x.mrs
+    interval: 120
+  youtube:
+    type: http
+    behavior: domain
+    format: mrs
+    url: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/youtube.mrs
+    path: ./ruleset/youtube.mrs
+    interval: 120
+  openai:
+    type: http
+    behavior: domain
+    format: mrs
+    url: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/openai.mrs
+    path: ./ruleset/openai.mrs
+    interval: 120
+  netflix:
+    type: http
+    behavior: domain
+    format: mrs
+    url: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/netflix.mrs
+    path: ./ruleset/netflix.mrs
+    interval: 120
+  disney:
+    type: http
+    behavior: domain
+    format: mrs
+    url: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/disney.mrs
+    path: ./ruleset/disney.mrs
+    interval: 120
+  spotify:
+    type: http
+    behavior: domain
+    format: mrs
+    url: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/spotify.mrs
+    path: ./ruleset/spotify.mrs
+    interval: 120
+  github:
+    type: http
+    behavior: domain
+    format: mrs
+    url: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/github.mrs
+    path: ./ruleset/github.mrs
+    interval: 120
+  instagram:
+    type: http
+    behavior: domain
+    format: mrs
+    url: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/instagram.mrs
+    path: ./ruleset/instagram.mrs
+    interval: 120
+  apple:
+    type: http
+    behavior: domain
+    format: mrs
+    url: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/apple.mrs
+    path: ./ruleset/apple.mrs
+    interval: 120
+  google:
+    type: http
+    behavior: domain
+    format: mrs
+    url: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/google.mrs
+    path: ./ruleset/google.mrs
+    interval: 120
+  microsoft:
+    type: http
+    behavior: domain
+    format: mrs
+    url: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/microsoft.mrs
+    path: ./ruleset/microsoft.mrs
+    interval: 120
+  facebook:
+    type: http
+    behavior: domain
+    format: mrs
+    url: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/facebook.mrs
+    path: ./ruleset/facebook.mrs
+    interval: 120
+  telegram:
+    type: http
+    behavior: domain
+    format: mrs
+    url: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/telegram.mrs
+    path: ./ruleset/telegram.mrs
+    interval: 120
+  cloudflare:
+    type: http
+    behavior: domain
+    format: mrs
+    url: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/cloudflare.mrs
+    path: ./ruleset/cloudflare.mrs
+    interval: 120
+rules:
+- RULE-SET,openai,AI
+- RULE-SET,netflix,Netflix
+- RULE-SET,disney,Disney+
+- RULE-SET,spotify,Spotify
+- RULE-SET,cloudflare,Cloudflare
+- RULE-SET,github,GitHub
+- RULE-SET,telegram,Telegram
+- RULE-SET,youtube,YouTube
+- RULE-SET,google,Google
+- RULE-SET,x,X
+- RULE-SET,instagram,Instagram
+- RULE-SET,facebook,Facebook
+- RULE-SET,apple,Apple
+- RULE-SET,microsoft,DIRECT
+- DOMAIN-SUFFIX,openai.com,AI
+- DOMAIN-SUFFIX,chatgpt.com,AI
+- DOMAIN-SUFFIX,oaistatic.com,AI
+- DOMAIN-SUFFIX,oaiusercontent.com,AI
+- DOMAIN-SUFFIX,anthropic.com,AI
+- DOMAIN-SUFFIX,claude.ai,AI
+- DOMAIN-SUFFIX,perplexity.ai,AI
+- DOMAIN-SUFFIX,poe.com,AI
+- DOMAIN-SUFFIX,x.ai,AI
+- DOMAIN-SUFFIX,grok.com,AI
+- DOMAIN-SUFFIX,deepseek.com,AI
+- DOMAIN-SUFFIX,gemini.google.com,AI
+- DOMAIN-SUFFIX,bard.google.com,AI
+- DOMAIN-SUFFIX,aistudio.google.com,AI
+- DOMAIN-SUFFIX,copilot.microsoft.com,AI
+- DOMAIN-SUFFIX,midjourney.com,AI
+- DOMAIN-SUFFIX,huggingface.co,AI
+- DOMAIN-SUFFIX,character.ai,AI
+- DOMAIN-SUFFIX,cloudflare.com,Cloudflare
+- DOMAIN-SUFFIX,cloudflareinsights.com,Cloudflare
+- DOMAIN-SUFFIX,cloudflarestream.com,Cloudflare
+- GEOSITE,steam@cn,DIRECT
+- GEOSITE,steam,手动选择
+- PROCESS-NAME,v2ray,DIRECT
+- PROCESS-NAME,Surge,DIRECT
+- PROCESS-NAME,ss-local,DIRECT
+- PROCESS-NAME,privoxy,DIRECT
+- PROCESS-NAME,trojan,DIRECT
+- PROCESS-NAME,trojan-go,DIRECT
+- PROCESS-NAME,naive,DIRECT
+- PROCESS-NAME,CloudflareWARP,DIRECT
+- PROCESS-NAME,Cloudflare WARP,DIRECT
+- IP-CIDR,162.159.193.0/24,DIRECT,no-resolve
+- PROCESS-NAME,p4pclient,DIRECT
+- PROCESS-NAME,Thunder,DIRECT
+- PROCESS-NAME,DownloadService,DIRECT
+- PROCESS-NAME,qbittorrent,DIRECT
+- PROCESS-NAME,fdm,DIRECT
+- PROCESS-NAME,aria2c,DIRECT
+- PROCESS-NAME,Folx,DIRECT
+- PROCESS-NAME,NetTransport,DIRECT
+- PROCESS-NAME,uTorrent,DIRECT
+- PROCESS-NAME,WebTorrent,DIRECT
+- GEOIP,LAN,DIRECT
+- GEOIP,CN,DIRECT
+- MATCH,手动选择

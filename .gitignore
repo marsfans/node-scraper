@@ -1,0 +1,5 @@
+mihomo
+__pycache__/
+output/
+geoip_cache.json
+dist/.clash.new.yaml

@@ -1,0 +1,26 @@
+subscriptions:
+- https://github.com/mid8568/My-V2Ray-Nodes-Clean/raw/refs/heads/main/v2ray-base64.txt
+- https://raw.githubusercontent.com/mid8568/My-V2Ray-Nodes-Clean/main/v2ray-base64.txt
+- https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-JP.yaml
+- https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-US.yaml
+- https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-SG.yaml
+- https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-KR.yaml
+- https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-HK.yaml
+- https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/by-country/clash-TW.yaml
+- https://raw.githubusercontent.com/Au1rxx/free-vpn-subscriptions/main/output/clash.yaml
+- https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/main/BLACK_VLESS_RUS.txt
+- https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/main/BLACK_VLESS_RUS_mobile.txt
+- https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/main/BLACK_SS+All_RUS.txt
+- https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/main/BLACK_SS_WEAK_DPI_RUS.txt
+- https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/main/Vless-Reality-White-Lists-Rus-Mobile.txt
+- https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/v2ray.txt
+- https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub
+- https://raw.githubusercontent.com/aiboboxx/v2rayfree/main/v2
+- https://raw.githubusercontent.com/mfuu/v2ray/master/v2ray
+- https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/list.yml
+- https://raw.githubusercontent.com/chengaopan/AutoMergePublicNodes/master/list.yml
+- https://raw.githubusercontent.com/free18/v2ray/refs/heads/main/v.txt
+- https://raw.githubusercontent.com/ebrasha/free-v2ray-public-list/main/V2Ray-Config-By-EbraSha.txt
+- https://raw.githubusercontent.com/barry-far/V2ray-Config/main/All_Configs_Sub.txt
+tg_channels: []
+web_pages: []

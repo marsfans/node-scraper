@@ -1,0 +1,9 @@
+subscriptions:
+- https://raw.githubusercontent.com/Barabama/FreeNodes/feat/ai-crawler-v2/nodes/yudou.yaml
+- https://raw.githubusercontent.com/Barabama/FreeNodes/feat/ai-crawler-v2/nodes/oneclash.yaml
+- https://raw.githubusercontent.com/Barabama/FreeNodes/feat/ai-crawler-v2/nodes/clashstair.yaml
+- https://raw.githubusercontent.com/Barabama/FreeNodes/feat/ai-crawler-v2/nodes/cfmem.yaml
+- https://raw.githubusercontent.com/Barabama/FreeNodes/feat/ai-crawler-v2/nodes/clashmeta.yaml
+- https://raw.githubusercontent.com/igareck/vpn-configs-for-russia/refs/heads/main/BLACK_SS+All_RUS.txt
+tg_channels: []
+web_pages: []

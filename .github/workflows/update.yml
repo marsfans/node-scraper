@@ -1,0 +1,49 @@
+name: Update nodes
+
+on:
+  schedule:
+    # GitHub 的 cron 用 UTC：00/04/10 UTC = 北京时间 08/12/18 点
+    - cron: "0 0,4,10 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-nodes
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      TZ: Asia/Shanghai
+      MIHOMO_VERSION: v1.19.32
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install deps
+        run: pip install -r requirements.txt
+
+      - name: Install mihomo
+        run: |
+          curl -fsSL -o mihomo.gz "https://github.com/MetaCubeX/mihomo/releases/download/${MIHOMO_VERSION}/mihomo-linux-amd64-compatible-${MIHOMO_VERSION}.gz"
+          gunzip -f mihomo.gz && chmod +x mihomo && ./mihomo -v
+
+      - name: Scrape & build
+        run: ./run.sh
+
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898299+github-actions[bot]@users.noreply.github.com"
+          git add dist/clash.yaml
+          if git diff --cached --quiet; then echo "no changes"; exit 0; fi
+          git commit -m "update nodes $(date '+%F %H:%M')"
+          git push
