@@ -16,6 +16,16 @@ proxies:
     path: /
     headers:
       Host: ''
+- name: DE+Astra Networks
+  type: trojan
+  server: de-bots4.h1cloud.net
+  port: 25267
+  password: happybirthdaydaniel
+  udp: true
+  tls: true
+  sni: t.me/FuckTheWall
+  client-fingerprint: ios
+  skip-cert-verify: true
 - name: IR+Cloudhop
   type: trojan
   server: 45.131.4.38
@@ -29,8 +39,7 @@ proxies:
       Host: www.pleadcourt.org
   tls: true
   sni: www.pleadcourt.org
-  client-fingerprint: chrome
-  skip-cert-verify: true
+  client-fingerprint: unsafe
   alpn:
   - http/1.1
 - name: KR+Kornet
@@ -46,16 +55,6 @@ proxies:
     path: /?ed=2048@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN
     headers:
       Host: ''
-- name: NL+HSTQ-HOSTING-SERVICE
-  type: trojan
-  server: de-bots4.h1cloud.net
-  port: 25267
-  password: happybirthdaydaniel
-  udp: true
-  tls: true
-  sni: t.me/FuckTheWall
-  client-fingerprint: android
-  skip-cert-verify: true
 - name: US+FS Net
   type: vmess
   server: us-23.hihu.net
@@ -68,21 +67,7 @@ proxies:
   ws-opts:
     path: /870ao26f
     headers:
-      Host: 172.66.0.251
-- name: US+Turing Group
-  type: trojan
-  server: su106.izzzzzi.com
-  port: 20008
-  password: 4fd2b10b6a754019
-  udp: true
-  tls: true
-- name: US+Turing Group 2
-  type: trojan
-  server: ui108.pacemakere.com
-  port: 20008
-  password: 6ab93ec68bd94b76
-  udp: true
-  tls: true
+      Host: ''
 - name: US+WPEngine
   type: trojan
   server: 141.193.213.172
@@ -97,20 +82,6 @@ proxies:
   tls: true
   sni: www.calmlunch.com
   client-fingerprint: android
-- name: US+Zenfolio
-  type: trojan
-  server: 199.181.197.99
-  port: 443
-  password: 70756c73-0000-4000-8000-650000000000
-  udp: true
-  network: ws
-  ws-opts:
-    path: /pulse
-    headers:
-      Host: parsa-panel-u48we.wotic15356.workers.dev
-  tls: true
-  sni: parsa-panel-u48we.wotic15356.workers.dev
-  client-fingerprint: chrome
 proxy-groups:
 - name: 自动选择
   type: url-test
