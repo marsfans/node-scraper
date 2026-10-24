@@ -3,19 +3,6 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: CN+Beijing Baidu Netcom Science and Technology
-  type: vmess
-  server: 120.48.133.162
-  port: 10086
-  uuid: a01e5d56-464f-45b9-b600-164db4700162
-  alterId: 0
-  cipher: auto
-  udp: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: ''
 - name: DE+Astra Networks
   type: trojan
   server: de-bots4.h1cloud.net
@@ -23,9 +10,8 @@ proxies:
   password: happybirthdaydaniel
   udp: true
   tls: true
-  sni: t.me/FuckTheWall
-  client-fingerprint: ios
-  skip-cert-verify: true
+  sni: t.me/fuckthewall
+  client-fingerprint: android
 - name: IR+Cloudhop
   type: trojan
   server: 45.131.4.38
@@ -39,7 +25,7 @@ proxies:
       Host: www.pleadcourt.org
   tls: true
   sni: www.pleadcourt.org
-  client-fingerprint: unsafe
+  client-fingerprint: firefox
   alpn:
   - http/1.1
 - name: KR+Kornet
@@ -53,19 +39,6 @@ proxies:
   network: ws
   ws-opts:
     path: /?ed=2048@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN
-    headers:
-      Host: ''
-- name: US+FS Net
-  type: vmess
-  server: us-23.hihu.net
-  port: 80
-  uuid: 8a9aaa70-ced9-11f1-b934-205c6d5f5d78
-  alterId: 0
-  cipher: auto
-  udp: true
-  network: ws
-  ws-opts:
-    path: /870ao26f
     headers:
       Host: ''
 - name: US+WPEngine
