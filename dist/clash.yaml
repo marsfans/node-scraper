@@ -3,43 +3,6 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: CN+Aliyun Computing
-  type: vmess
-  server: 39.108.113.127
-  port: 10086
-  uuid: 2eb25c1e-c3b5-45cf-9afd-dd3ddc00da10
-  alterId: 0
-  cipher: auto
-  udp: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: ''
-- name: CN+Beijing Baidu Netcom Science and Technology
-  type: vmess
-  server: 120.48.133.162
-  port: 10086
-  uuid: a01e5d56-464f-45b9-b600-164db4700162
-  alterId: 0
-  cipher: auto
-  udp: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: ''
-- name: CN+China Unicom CHINA169 Anhui Province Network
-  type: vmess
-  server: 112.132.215.108
-  port: 50002
-  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
-  alterId: 64
-  cipher: auto
-  udp: true
-  ws-opts:
-    headers:
-      Host: 112.132.215.108
 - name: IR+Cloudhop
   type: trojan
   server: 45.131.4.38
@@ -53,7 +16,7 @@ proxies:
       Host: www.pleadcourt.org
   tls: true
   sni: www.pleadcourt.org
-  client-fingerprint: chrome
+  client-fingerprint: android
   alpn:
   - http/1.1
 - name: KR+Ahn Seon Young
@@ -66,24 +29,6 @@ proxies:
   sni: www.itunes.com
   client-fingerprint: chrome
   skip-cert-verify: true
-- name: NL+HSTQ-HOSTING-SERVICE
-  type: trojan
-  server: de-bots4.h1cloud.net
-  port: 25267
-  password: happybirthdaydaniel
-  udp: true
-  tls: true
-  sni: t.me/fuckthewall
-  client-fingerprint: chrome
-- name: TW+Akari Networks
-  type: trojan
-  server: tjtw.m2k699.com
-  port: 24999
-  password: 29086912-33e4-4e06-ba2b-60f1a195864f
-  udp: true
-  tls: true
-  sni: tjtw.m2k699.com
-  client-fingerprint: chrome
 - name: US+Render
   type: trojan
   server: 216.24.57.225
@@ -97,8 +42,12 @@ proxies:
       Host: fin.netvia.ir
   tls: true
   sni: fin.netvia.ir
-  client-fingerprint: ios
+  client-fingerprint: chrome
   skip-cert-verify: true
+  alpn:
+  - h2
+  - http/1.1
+  - h3
 - name: US+WPEngine
   type: trojan
   server: 141.193.213.172
@@ -126,7 +75,7 @@ proxies:
       Host: support.zoom.us.sg4.zidstore.net
   tls: true
   sni: support.zoom.us.sg4.zidstore.net
-  client-fingerprint: edge
+  client-fingerprint: firefox
   skip-cert-verify: true
 proxy-groups:
 - name: 自动选择
