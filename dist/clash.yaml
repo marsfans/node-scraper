@@ -12,6 +12,10 @@ proxies:
   cipher: auto
   udp: true
   network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: ''
 - name: CN+Beijing Baidu Netcom Science and Technology
   type: vmess
   server: 120.48.133.162
@@ -21,6 +25,21 @@ proxies:
   cipher: auto
   udp: true
   network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: ''
+- name: CN+China Unicom CHINA169 Anhui Province Network
+  type: vmess
+  server: 112.132.215.108
+  port: 50002
+  uuid: 418048af-a293-4b99-9b0c-98ca3580dd24
+  alterId: 64
+  cipher: auto
+  udp: true
+  ws-opts:
+    headers:
+      Host: 112.132.215.108
 - name: IR+Cloudhop
   type: trojan
   server: 45.131.4.38
@@ -34,35 +53,37 @@ proxies:
       Host: www.pleadcourt.org
   tls: true
   sni: www.pleadcourt.org
-  client-fingerprint: android
+  client-fingerprint: chrome
   alpn:
   - http/1.1
-- name: KR+Kornet
-  type: vmess
-  server: 183.109.131.75
-  port: 20086
-  uuid: b26c4803-0bca-467c-a245-c9a80bdd72ec
-  alterId: 0
-  cipher: auto
+- name: KR+Ahn Seon Young
+  type: trojan
+  server: tjhg.m2k699.com
+  port: 24999
+  password: 29086912-33e4-4e06-ba2b-60f1a195864f
   udp: true
-  network: ws
-  ws-opts:
-    path: /?ed=2048@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN--@HiByeVPNN
-    headers:
-      Host: ''
-- name: US+Hostwinds
-  type: vmess
-  server: 23.254.194.215
-  port: 8080
-  uuid: 3c75a551-81d6-46d0-876d-79519719bb22
-  alterId: 0
-  cipher: auto
+  tls: true
+  sni: www.itunes.com
+  client-fingerprint: chrome
+  skip-cert-verify: true
+- name: NL+HSTQ-HOSTING-SERVICE
+  type: trojan
+  server: de-bots4.h1cloud.net
+  port: 25267
+  password: happybirthdaydaniel
   udp: true
-  network: ws
-  ws-opts:
-    path: 3c75a551-81d6-46d0-876d-79519719bb22-vm
-    headers:
-      Host: www.bing.com
+  tls: true
+  sni: t.me/fuckthewall
+  client-fingerprint: chrome
+- name: TW+Akari Networks
+  type: trojan
+  server: tjtw.m2k699.com
+  port: 24999
+  password: 29086912-33e4-4e06-ba2b-60f1a195864f
+  udp: true
+  tls: true
+  sni: tjtw.m2k699.com
+  client-fingerprint: chrome
 - name: US+Render
   type: trojan
   server: 216.24.57.225
@@ -76,12 +97,8 @@ proxies:
       Host: fin.netvia.ir
   tls: true
   sni: fin.netvia.ir
-  client-fingerprint: chrome
+  client-fingerprint: ios
   skip-cert-verify: true
-  alpn:
-  - h2
-  - http/1.1
-  - h3
 - name: US+WPEngine
   type: trojan
   server: 141.193.213.172
@@ -96,6 +113,21 @@ proxies:
   tls: true
   sni: www.calmlunch.com
   client-fingerprint: android
+- name: US+Zoom Video Communications
+  type: trojan
+  server: support.zoom.us
+  port: 443
+  password: 34bfb8d8-e37f-4872-a452-a2b2b4310aed
+  udp: true
+  network: ws
+  ws-opts:
+    path: /whatever/trojan-ws
+    headers:
+      Host: support.zoom.us.sg4.zidstore.net
+  tls: true
+  sni: support.zoom.us.sg4.zidstore.net
+  client-fingerprint: edge
+  skip-cert-verify: true
 proxy-groups:
 - name: 自动选择
   type: url-test
