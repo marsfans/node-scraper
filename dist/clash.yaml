@@ -3,23 +3,28 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: FI+ASDhere
-  type: trojan
-  server: 45-149-147-213.sslip.io
-  port: 4444
-  password: 9b347a9b-d7a6-4b51-9890-eff62b832834
+- name: CN+Aliyun Computing
+  type: vmess
+  server: 39.108.113.127
+  port: 10086
+  uuid: 2eb25c1e-c3b5-45cf-9afd-dd3ddc00da10
+  alterId: 0
+  cipher: auto
   udp: true
-  network: grpc
-  grpc-opts:
-    grpc-service-name: kobedin-server1-trojan
-  tls: true
-  sni: 45-149-147-213.sslip.io
-  client-fingerprint: chrome
-  alpn:
-  - h2
-- name: SE+Baykov Ilya Sergeevich
+  network: ws
+- name: KR+Ahn Seon Young
   type: trojan
-  server: 192.145.30.27
+  server: tjhg.m2k699.com
+  port: 24999
+  password: 29086912-33e4-4e06-ba2b-60f1a195864f
+  udp: true
+  tls: true
+  sni: www.itunes.com
+  client-fingerprint: chrome
+  skip-cert-verify: true
+- name: NL+Global Connectivity Solutions LLP
+  type: trojan
+  server: 139.28.240.24
   port: 443
   password: humanity
   udp: true
@@ -44,20 +49,24 @@ proxies:
       Host: mitivpn-mitivpn.ac.ir
   tls: true
   sni: community.fastly.steamstatic.com
-  client-fingerprint: chrome
+  client-fingerprint: android
   skip-cert-verify: true
-  alpn:
-  - http/1.1
-- name: US+Lease Packet Datacenter PVT.
-  type: trojan
-  server: tjmg2.m2k699.com
-  port: 24999
-  password: 29086912-33e4-4e06-ba2b-60f1a195864f
+- name: US+Oracle Cloud Infrastructure
+  type: vmess
+  server: 129.146.143.80
+  port: 48111
+  uuid: d4603cc2-e0ee-4651-83f5-1db5b7168177
+  alterId: 0
+  cipher: auto
   udp: true
-  tls: true
-  sni: www.itunes.com
-  client-fingerprint: chrome
-  skip-cert-verify: true
+- name: US+Tencent Cloud Computing
+  type: vmess
+  server: 43.130.35.53
+  port: 10087
+  uuid: 8e93b009-f1af-448a-b8ef-b110849a35f0
+  alterId: 0
+  cipher: auto
+  udp: true
 - name: US+WPEngine
   type: trojan
   server: 141.193.213.172
@@ -71,20 +80,6 @@ proxies:
       Host: www.calmlunch.com
   tls: true
   sni: www.calmlunch.com
-  client-fingerprint: android
-- name: US+Zenfolio
-  type: trojan
-  server: 199.181.197.99
-  port: 443
-  password: 70756c73-0000-4000-8000-650000000000
-  udp: true
-  network: ws
-  ws-opts:
-    path: /pulse
-    headers:
-      Host: parsa-panel-u48we.wotic15356.workers.dev
-  tls: true
-  sni: parsa-panel-u48we.wotic15356.workers.dev
   client-fingerprint: android
 - name: US+Zoom Video Communications
   type: trojan
