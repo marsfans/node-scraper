@@ -3,6 +3,19 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
+- name: CN+Aliyun Computing
+  type: vmess
+  server: 39.108.113.127
+  port: 10086
+  uuid: 2eb25c1e-c3b5-45cf-9afd-dd3ddc00da10
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: ''
 - name: CN+Beijing Baidu Netcom Science and Technology
   type: vmess
   server: 120.48.133.162
@@ -12,9 +25,22 @@ proxies:
   cipher: auto
   udp: true
   network: ws
-- name: IR+Cloudhop
+- name: DE+xTom
+  type: vmess
+  server: de.zhou-yufan.com
+  port: 443
+  uuid: f38e591d-d13a-4c30-9763-6be3ad65f3ec
+  alterId: 0
+  cipher: auto
+  udp: true
+  ws-opts:
+    path: /
+    headers:
+      Host: de.zhou-yufan.com
+  tls: true
+- name: SE+Baykov Ilya Sergeevich
   type: trojan
-  server: 45.131.4.38
+  server: 192.145.30.27
   port: 443
   password: humanity
   udp: true
@@ -26,8 +52,6 @@ proxies:
   tls: true
   sni: www.pleadcourt.org
   client-fingerprint: android
-  alpn:
-  - http/1.1
 - name: US+Fastly
   type: trojan
   server: 199.232.9.244
@@ -76,6 +100,21 @@ proxies:
   tls: true
   sni: www.calmlunch.com
   client-fingerprint: android
+- name: US+Zoom Video Communications
+  type: trojan
+  server: support.zoom.us
+  port: 443
+  password: 34bfb8d8-e37f-4872-a452-a2b2b4310aed
+  udp: true
+  network: ws
+  ws-opts:
+    path: /whatever/trojan-ws
+    headers:
+      Host: support.zoom.us.sg4.zidstore.net
+  tls: true
+  sni: support.zoom.us.sg4.zidstore.net
+  client-fingerprint: android
+  skip-cert-verify: true
 proxy-groups:
 - name: 自动选择
   type: url-test
