@@ -3,21 +3,35 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: HK+Alibaba.com Singapore E-Commerce Private
+- name: CN+Aliyun Computing
   type: vmess
-  server: 8.217.254.88
-  port: 443
-  uuid: f23bb427-c1f9-4373-876c-2f43e9f790f3
+  server: 39.108.113.127
+  port: 10086
+  uuid: a01e5d56-464f-45b9-b600-164db4700162
   alterId: 0
   cipher: auto
   udp: true
   network: ws
-  ws-opts:
-    path: /ws-vmess
-    headers:
-      Host: 2b9hwy8ocx7q74nm.v.3dns.vip
+- name: CN+Beijing Baidu Netcom Science and Technology
+  type: vmess
+  server: 120.48.133.162
+  port: 10086
+  uuid: a8d931b0-6c27-428b-8d86-c20efea3dba7
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+- name: DE+Astra Networks
+  type: trojan
+  server: de-bots4.h1cloud.net
+  port: 25267
+  password: happybirthdaydaniel
+  udp: true
   tls: true
-  servername: 2b9hwy8ocx7q74nm.v.3dns.vip
+  sni: t.me/FuckTheWall
+  client-fingerprint: chrome
+  alpn:
+  - http/1.1
 - name: IR+Cloudhop
   type: trojan
   server: 45.131.4.38
@@ -31,42 +45,17 @@ proxies:
       Host: www.pleadcourt.org
   tls: true
   sni: www.pleadcourt.org
-  client-fingerprint: android
   alpn:
   - http/1.1
-- name: KR+Ahn Seon Young
+- name: JP+Interscale
   type: trojan
-  server: tjhg.m2k699.com
-  port: 24999
-  password: 29086912-33e4-4e06-ba2b-60f1a195864f
-  udp: true
-  tls: true
-  sni: www.itunes.com
-  client-fingerprint: chrome
-  skip-cert-verify: true
-- name: KR+Oracle Cloud Infrastructure
-  type: vmess
-  server: 132.145.80.230
-  port: 80
-  uuid: 5155860e-d07d-46c3-9128-3afbd84626c7
-  alterId: 0
-  cipher: auto
-  udp: true
-  network: ws
-  ws-opts:
-    path: /cctv13.m3u8
-    headers:
-      Host: kr02.a0a.xyz
-- name: MY+Alibaba Cloud - MY
-  type: trojan
-  server: 47.250.84.25
+  server: jp1.zestapp778.com
   port: 443
-  password: 5931134d1cde66bf83a54acdfebe7ab2
+  password: Trojan@82164024
   udp: true
   tls: true
-  sni: 47.250.84.25
-  client-fingerprint: android
-  skip-cert-verify: true
+  sni: jp1.zestapp778.com
+  client-fingerprint: qq
 - name: MY+Alibaba.com
   type: vmess
   server: 47.250.135.244
@@ -75,10 +64,30 @@ proxies:
   alterId: 0
   cipher: auto
   udp: true
-  network: raw
+  ws-opts:
+    path: /
+    headers:
+      Host: ''
 - name: US+Fastly
   type: trojan
-  server: 199.232.78.160
+  server: 199.232.9.244
+  port: 443
+  password: mitivpn
+  udp: true
+  network: ws
+  ws-opts:
+    path: '%2F—%40MiTiVPN—%40MiTiVPN%2F—%40MiTiVPN—%40MiTiVPN%2F—%40MiTiVPN—%40MiTiVPN%2FNLSus—%40MiTiVPN—%40MiTiVPN%2F—%40MiTiVPN—%40MiTiVPN%2F—%40MiTiVPN—%40MiTiVPN'
+    headers:
+      Host: mitivpn-mitivpn.ac.ir
+  tls: true
+  sni: ns1.firefox.com
+  client-fingerprint: chrome
+  skip-cert-verify: true
+  alpn:
+  - http%2F1.1
+- name: US+Fastly 2
+  type: trojan
+  server: 151.101.36.244
   port: 443
   password: mitivpn
   udp: true
@@ -88,8 +97,8 @@ proxies:
     headers:
       Host: mitivpn-mitivpn.ac.ir
   tls: true
-  sni: community.fastly.steamstatic.com
-  client-fingerprint: chrome
+  sni: ns2.firefox.com
+  client-fingerprint: ios
   skip-cert-verify: true
   alpn:
   - http/1.1
@@ -107,6 +116,20 @@ proxies:
   tls: true
   sni: www.calmlunch.com
   client-fingerprint: android
+- name: US+Zenfolio
+  type: trojan
+  server: 199.181.197.99
+  port: 443
+  password: 70756c73-0000-4000-8000-650000000000
+  udp: true
+  network: ws
+  ws-opts:
+    path: /pulse
+    headers:
+      Host: parsa-panel-u48we.wotic15356.workers.dev
+  tls: true
+  sni: parsa-panel-u48we.wotic15356.workers.dev
+  client-fingerprint: edge
 - name: US+Zoom Video Communications
   type: trojan
   server: support.zoom.us
