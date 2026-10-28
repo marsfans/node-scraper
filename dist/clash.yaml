@@ -3,11 +3,11 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: CN+Aliyun Computing
+- name: CN+Beijing Baidu Netcom Science and Technology
   type: vmess
-  server: 39.108.113.127
+  server: 120.48.133.162
   port: 10086
-  uuid: 2eb25c1e-c3b5-45cf-9afd-dd3ddc00da10
+  uuid: a8d931b0-6c27-428b-8d86-c20efea3dba7
   alterId: 0
   cipher: auto
   udp: true
@@ -16,15 +16,6 @@ proxies:
     path: /
     headers:
       Host: ''
-- name: CN+Beijing Baidu Netcom Science and Technology
-  type: vmess
-  server: 120.48.133.162
-  port: 10086
-  uuid: f81d0fc9-c6b0-4dab-a270-6e697e0a367f
-  alterId: 0
-  cipher: auto
-  udp: true
-  network: ws
 - name: DE+xTom
   type: vmess
   server: de.zhou-yufan.com
@@ -33,11 +24,29 @@ proxies:
   alterId: 0
   cipher: auto
   udp: true
+  tls: true
+  servername: de.zhou-yufan.com
+- name: HK+Hong Kong Lightlayer Technology
+  type: vmess
+  server: 156.245.232.239
+  port: 35043
+  uuid: b15e481d-17e4-41a8-84c2-23d4f0514d9a
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
   ws-opts:
     path: /
     headers:
-      Host: de.zhou-yufan.com
-  tls: true
+      Host: 156.245.232.239
+- name: MY+Alibaba.com
+  type: vmess
+  server: 47.250.135.244
+  port: 10000
+  uuid: aedc66b8-99d7-4a21-8310-61870e7f870d
+  alterId: 0
+  cipher: auto
+  udp: true
 - name: SE+Baykov Ilya Sergeevich
   type: trojan
   server: 192.145.30.27
@@ -51,41 +60,6 @@ proxies:
       Host: www.pleadcourt.org
   tls: true
   sni: www.pleadcourt.org
-  client-fingerprint: android
-- name: US+Fastly
-  type: trojan
-  server: 199.232.9.244
-  port: 443
-  password: mitivpn
-  udp: true
-  network: ws
-  ws-opts:
-    path: '%2F—%40MiTiVPN—%40MiTiVPN%2F—%40MiTiVPN—%40MiTiVPN%2F—%40MiTiVPN—%40MiTiVPN%2FNLSus—%40MiTiVPN—%40MiTiVPN%2F—%40MiTiVPN—%40MiTiVPN%2F—%40MiTiVPN—%40MiTiVPN'
-    headers:
-      Host: mitivpn-mitivpn.ac.ir
-  tls: true
-  sni: ns1.firefox.com
-  client-fingerprint: chrome
-  skip-cert-verify: true
-  alpn:
-  - http%2F1.1
-- name: US+Fastly 2
-  type: trojan
-  server: 151.101.36.244
-  port: 443
-  password: mitivpn
-  udp: true
-  network: ws
-  ws-opts:
-    path: /---@VPNine1---@VPNine1/---@VPNine1---@VPNine1/---@VPNine1---@VPNine1/NLSus---@VPNine1---@VPNine1/---@VPNine1---@VPNine1/---@VPNine1---@VPNine1
-    headers:
-      Host: mitivpn-mitivpn.ac.ir
-  tls: true
-  sni: ns2.firefox.com
-  client-fingerprint: chrome
-  skip-cert-verify: true
-  alpn:
-  - http/1.1
 - name: US+WPEngine
   type: trojan
   server: 141.193.213.172
@@ -100,6 +74,20 @@ proxies:
   tls: true
   sni: www.calmlunch.com
   client-fingerprint: android
+- name: US+Zenfolio
+  type: trojan
+  server: 199.181.197.99
+  port: 443
+  password: 70756c73-0000-4000-8000-650000000000
+  udp: true
+  network: ws
+  ws-opts:
+    path: /pulse
+    headers:
+      Host: parsa-panel-u48we.wotic15356.workers.dev
+  tls: true
+  sni: parsa-panel-u48we.wotic15356.workers.dev
+  client-fingerprint: chrome
 - name: US+Zoom Video Communications
   type: trojan
   server: support.zoom.us
@@ -113,7 +101,6 @@ proxies:
       Host: support.zoom.us.sg4.zidstore.net
   tls: true
   sni: support.zoom.us.sg4.zidstore.net
-  client-fingerprint: android
   skip-cert-verify: true
 proxy-groups:
 - name: 自动选择
