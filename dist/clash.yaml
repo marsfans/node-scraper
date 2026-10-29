@@ -3,28 +3,19 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: CA+Cloudflare
+- name: CN+Beijing Baidu Netcom Science and Technology
   type: vmess
-  server: 172.67.187.145
-  port: 80
-  uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
+  server: 120.48.133.162
+  port: 10086
+  uuid: a8d931b0-6c27-428b-8d86-c20efea3dba7
   alterId: 0
   cipher: auto
   udp: true
   network: ws
   ws-opts:
-    path: /ws
+    path: /
     headers:
-      Host: vmess.lbw666.dpdns.org
-- name: CN+Beijing Baidu Netcom Science and Technology
-  type: vmess
-  server: 120.48.133.162
-  port: 10086
-  uuid: f81d0fc9-c6b0-4dab-a270-6e697e0a367f
-  alterId: 0
-  cipher: auto
-  udp: true
-  network: ws
+      Host: ''
 - name: IR+Cloudhop
   type: trojan
   server: 45.131.4.38
@@ -38,14 +29,26 @@ proxies:
       Host: www.pleadcourt.org
   tls: true
   sni: www.pleadcourt.org
-  client-fingerprint: android
   alpn:
   - http/1.1
-- name: MY+Alibaba.com
+- name: KZ+TOO Tol'ko litsenzionnyye produkty
   type: vmess
-  server: 47.250.135.244
-  port: 10000
-  uuid: aedc66b8-99d7-4a21-8310-61870e7f870d
+  server: 38.107.234.57
+  port: 80
+  uuid: 567f4be5-12ab-42e1-b8d9-db6fd1fdd31c
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+  ws-opts:
+    path: /vmess/
+    headers:
+      Host: 3h-kazakhstan1.09vpn.com
+- name: MX+Lightnode-MX
+  type: vmess
+  server: 38.60.224.173
+  port: 32153
+  uuid: 5cf1f470-3f70-4589-a2a4-4657ea3a1edf
   alterId: 0
   cipher: auto
   udp: true
@@ -61,10 +64,24 @@ proxies:
   udp: true
   tls: true
   sni: lt-1.1984.love
-  client-fingerprint: qq
+- name: US+Alibaba.com
+  type: vmess
+  server: rib9jxayoqjgn2kw.v.3dns.vip
+  port: 443
+  uuid: 9b31490d-190e-4ef1-af0a-7ccab3e7c3b5
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+  ws-opts:
+    path: /ws-vmess
+    headers:
+      Host: ''
+  tls: true
+  servername: rib9jxayoqjgn2kw.v.3dns.vip
 - name: US+Fastly
   type: trojan
-  server: 146.75.57.120
+  server: 151.101.36.120
   port: 443
   password: MiTiVPN
   udp: true
@@ -93,35 +110,6 @@ proxies:
   tls: true
   sni: www.calmlunch.com
   client-fingerprint: android
-- name: US+Zenfolio
-  type: trojan
-  server: 199.181.197.99
-  port: 443
-  password: 70756c73-0000-4000-8000-650000000000
-  udp: true
-  network: ws
-  ws-opts:
-    path: /pulse
-    headers:
-      Host: parsa-panel-u48we.wotic15356.workers.dev
-  tls: true
-  sni: parsa-panel-u48we.wotic15356.workers.dev
-  client-fingerprint: chrome
-- name: US+Zoom Video Communications
-  type: trojan
-  server: support.zoom.us
-  port: 443
-  password: 34bfb8d8-e37f-4872-a452-a2b2b4310aed
-  udp: true
-  network: ws
-  ws-opts:
-    path: /whatever/trojan-ws
-    headers:
-      Host: support.zoom.us.sg4.zidstore.net
-  tls: true
-  sni: support.zoom.us.sg4.zidstore.net
-  client-fingerprint: android
-  skip-cert-verify: true
 proxy-groups:
 - name: 自动选择
   type: url-test
