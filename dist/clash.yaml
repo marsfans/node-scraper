@@ -5,7 +5,7 @@ log-level: info
 proxies:
 - name: CA+Cloudflare
   type: vmess
-  server: 104.21.7.133
+  server: 172.67.187.145
   port: 80
   uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
   alterId: 0
@@ -13,7 +13,7 @@ proxies:
   udp: true
   network: ws
   ws-opts:
-    path: /ws?ed=2048
+    path: /ws
     headers:
       Host: vmess.lbw666.dpdns.org
 - name: CN+Beijing Baidu Netcom Science and Technology
@@ -25,48 +25,6 @@ proxies:
   cipher: auto
   udp: true
   network: ws
-- name: DE+xTom
-  type: vmess
-  server: de.zhou-yufan.com
-  port: 443
-  uuid: f38e591d-d13a-4c30-9763-6be3ad65f3ec
-  alterId: 0
-  cipher: auto
-  udp: true
-  ws-opts:
-    path: /
-    headers:
-      Host: de.zhou-yufan.com
-  tls: true
-- name: HK+Alibaba Cloud - HK
-  type: vmess
-  server: QlxYtBpuqj3qqJsJ.v.3dns.vip
-  port: 443
-  uuid: b664cc36-4896-454b-bb9c-1377c76176de
-  alterId: 0
-  cipher: auto
-  udp: true
-  network: ws
-  ws-opts:
-    path: /ws-vmess
-    headers:
-      Host: QlxYtBpuqj3qqJsJ.v.3dns.vip
-  tls: true
-- name: ID+Alibaba.com Singapore E-Commerce Private
-  type: vmess
-  server: TnmXPIFVwfvyFZvf.v.3dns.vip
-  port: 443
-  uuid: b664cc36-4896-454b-bb9c-1377c76176de
-  alterId: 0
-  cipher: auto
-  udp: true
-  network: ws
-  ws-opts:
-    path: /ws-vmess
-    headers:
-      Host: TnmXPIFVwfvyFZvf.v.3dns.vip
-  tls: true
-  servername: TnmXPIFVwfvyFZvf.v.3dns.vip
 - name: IR+Cloudhop
   type: trojan
   server: 45.131.4.38
@@ -83,6 +41,44 @@ proxies:
   client-fingerprint: android
   alpn:
   - http/1.1
+- name: MY+Alibaba.com
+  type: vmess
+  server: 47.250.135.244
+  port: 10000
+  uuid: aedc66b8-99d7-4a21-8310-61870e7f870d
+  alterId: 0
+  cipher: auto
+  udp: true
+  ws-opts:
+    path: /
+    headers:
+      Host: ''
+- name: RU+JSC Selectel
+  type: trojan
+  server: 176.114.95.242
+  port: 443
+  password: UAKWGor-h0woFsxKSWK92HptcM0g2k2h
+  udp: true
+  tls: true
+  sni: lt-1.1984.love
+  client-fingerprint: qq
+- name: US+Fastly
+  type: trojan
+  server: 146.75.57.120
+  port: 443
+  password: MiTiVPN
+  udp: true
+  network: ws
+  ws-opts:
+    path: /---@VPNine1---@VPNine1/---@VPNine1---@VPNine1/---@VPNine1---@VPNine1/NLSus---@VPNine1---@VPNine1/---@VPNine1---@VPNine1/---@VPNine1---@VPNine1
+    headers:
+      Host: mitivpn--mitivpn.ac.ir
+  tls: true
+  sni: firefox.com
+  client-fingerprint: chrome
+  skip-cert-verify: true
+  alpn:
+  - http/1.1
 - name: US+WPEngine
   type: trojan
   server: 141.193.213.172
@@ -97,6 +93,35 @@ proxies:
   tls: true
   sni: www.calmlunch.com
   client-fingerprint: android
+- name: US+Zenfolio
+  type: trojan
+  server: 199.181.197.99
+  port: 443
+  password: 70756c73-0000-4000-8000-650000000000
+  udp: true
+  network: ws
+  ws-opts:
+    path: /pulse
+    headers:
+      Host: parsa-panel-u48we.wotic15356.workers.dev
+  tls: true
+  sni: parsa-panel-u48we.wotic15356.workers.dev
+  client-fingerprint: chrome
+- name: US+Zoom Video Communications
+  type: trojan
+  server: support.zoom.us
+  port: 443
+  password: 34bfb8d8-e37f-4872-a452-a2b2b4310aed
+  udp: true
+  network: ws
+  ws-opts:
+    path: /whatever/trojan-ws
+    headers:
+      Host: support.zoom.us.sg4.zidstore.net
+  tls: true
+  sni: support.zoom.us.sg4.zidstore.net
+  client-fingerprint: android
+  skip-cert-verify: true
 proxy-groups:
 - name: 自动选择
   type: url-test
