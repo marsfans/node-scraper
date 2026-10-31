@@ -5,7 +5,7 @@ log-level: info
 proxies:
 - name: CA+Cloudflare
   type: vmess
-  server: 104.21.7.133
+  server: cf.0sm.com
   port: 80
   uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
   alterId: 0
@@ -13,18 +13,9 @@ proxies:
   udp: true
   network: ws
   ws-opts:
-    path: /ws
+    path: /ws?ed=2048
     headers:
       Host: vmess.lbw666.dpdns.org
-- name: CN+Aliyun Computing
-  type: vmess
-  server: 39.108.113.127
-  port: 10086
-  uuid: 19ee3050-be66-4850-9f13-fc9d47487a3c
-  alterId: 0
-  cipher: auto
-  udp: true
-  network: ws
 - name: CN+Beijing Baidu Netcom Science and Technology
   type: vmess
   server: 120.48.133.162
@@ -34,25 +25,6 @@ proxies:
   cipher: auto
   udp: true
   network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: ''
-- name: CY+BlueVPS OU
-  type: trojan
-  server: 194.55.164.118
-  port: 443
-  password: humanity
-  udp: true
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: ''
-  tls: true
-  sni: www.cordweave.com
-  client-fingerprint: chrome
-  skip-cert-verify: true
 - name: IR+Cloudhop
   type: trojan
   server: 45.131.4.38
@@ -76,6 +48,20 @@ proxies:
   alterId: 0
   cipher: auto
   udp: true
+- name: KR+Packetstream
+  type: trojan
+  server: 103.218.173.218
+  port: 443
+  password: humanity
+  udp: true
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: ''
+  tls: true
+  sni: www.cordweave.com
+  skip-cert-verify: true
 - name: RU+JSC Selectel
   type: trojan
   server: 176.114.95.242
@@ -84,53 +70,6 @@ proxies:
   udp: true
   tls: true
   sni: lt-1.1984.love
-- name: TR+Iaas
-  type: vmess
-  server: octpus1.gsmonline.ir
-  port: 8080
-  uuid: f33d1026-ce3b-4175-9f81-feb522fcfef1
-  alterId: 0
-  cipher: auto
-  udp: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: snapp.ir
-- name: US+Fastly
-  type: trojan
-  server: 167.82.64.120
-  port: 443
-  password: MiTiVPN
-  udp: true
-  network: ws
-  ws-opts:
-    path: /---@VPNine1---@VPNine1/---@VPNine1---@VPNine1/---@VPNine1---@VPNine1/NLSus---@VPNine1---@VPNine1/---@VPNine1---@VPNine1/---@VPNine1---@VPNine1
-    headers:
-      Host: mitivpn--mitivpn.ac.ir
-  tls: true
-  sni: firefox.com
-  client-fingerprint: firefox
-  skip-cert-verify: true
-  alpn:
-  - http/1.1
-- name: US+Fastly 2
-  type: trojan
-  server: 151.101.36.120
-  port: 443
-  password: MiTiVPN
-  udp: true
-  network: ws
-  ws-opts:
-    path: /---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/NLSus---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN
-    headers:
-      Host: mitivpn--mitivpn.ac.ir
-  tls: true
-  sni: firefox.com
-  client-fingerprint: chrome
-  skip-cert-verify: true
-  alpn:
-  - http/1.1
 - name: US+WPEngine
   type: trojan
   server: 141.193.213.172
@@ -144,20 +83,6 @@ proxies:
       Host: www.calmlunch.com
   tls: true
   sni: www.calmlunch.com
-  client-fingerprint: android
-- name: US+Zenfolio
-  type: trojan
-  server: 199.181.197.99
-  port: 443
-  password: 70756c73-0000-4000-8000-650000000000
-  udp: true
-  network: ws
-  ws-opts:
-    path: /pulse
-    headers:
-      Host: parsa-panel-u48we.wotic15356.workers.dev
-  tls: true
-  sni: parsa-panel-u48we.wotic15356.workers.dev
   client-fingerprint: android
 proxy-groups:
 - name: 自动选择
