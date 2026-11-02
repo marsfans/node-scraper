@@ -3,20 +3,33 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: CN+Beijing Baidu Netcom Science and Technology
+- name: CN+Aliyun Computing
   type: vmess
-  server: 120.48.133.162
+  server: 39.108.113.127
   port: 10086
-  uuid: a8d931b0-6c27-428b-8d86-c20efea3dba7
+  uuid: 19ee3050-be66-4850-9f13-fc9d47487a3c
   alterId: 0
   cipher: auto
   udp: true
   network: ws
-- name: DE+Alibaba.com
+- name: CN+Beijing Baidu Netcom Science and Technology
   type: vmess
-  server: WE8gwIzdpz5gX6eh.v.3dns.vip
+  server: 120.48.133.162
+  port: 10086
+  uuid: 4fc543d5-23ce-4556-ae2b-01685edd4397
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: ''
+- name: DE+Alibaba.com Singapore E-Commerce Private
+  type: vmess
+  server: 3E89CNW0HGtiFiDE.v.3dns.vip
   port: 443
-  uuid: ba7f523686914da1b35c62ae7927a8dd
+  uuid: 32b241ccb2a547d7adbe03365155f8de
   alterId: 0
   cipher: auto
   udp: true
@@ -24,34 +37,17 @@ proxies:
   ws-opts:
     path: /ws-vmess
     headers:
-      Host: WE8gwIzdpz5gX6eh.v.3dns.vip
+      Host: 3E89CNW0HGtiFiDE.v.3dns.vip
   tls: true
-  servername: WE8gwIzdpz5gX6eh.v.3dns.vip
-- name: IR+Cloudhop
-  type: trojan
-  server: 45.131.4.38
-  port: 443
-  password: humanity
+  servername: 3E89CNW0HGtiFiDE.v.3dns.vip
+- name: MY+Alibaba.com
+  type: vmess
+  server: 47.250.135.244
+  port: 10000
+  uuid: aedc66b8-99d7-4a21-8310-61870e7f870d
+  alterId: 0
+  cipher: auto
   udp: true
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.pleadcourt.org
-  tls: true
-  sni: www.pleadcourt.org
-  client-fingerprint: chrome
-  alpn:
-  - http/1.1
-- name: RU+JSC Selectel
-  type: trojan
-  server: 176.114.95.242
-  port: 443
-  password: UAKWGor-h0woFsxKSWK92HptcM0g2k2h
-  udp: true
-  tls: true
-  sni: lt-1.1984.love
-  client-fingerprint: android
 - name: RU+LLC Vpsville
   type: trojan
   server: de-bots4.h1cloud.net
@@ -61,47 +57,80 @@ proxies:
   tls: true
   client-fingerprint: android
   skip-cert-verify: true
-- name: SG+Alibaba.com Singapore E-Commerce Private
-  type: vmess
-  server: wjofHsQtEuEywxEq.v.3dns.vip
+- name: SE+Privex
+  type: trojan
+  server: 121.127.33.130
   port: 443
-  uuid: a9f4de8b-68f1-44b6-b6a2-1db60940503a
-  alterId: 0
-  cipher: auto
-  udp: true
-  network: ws
-  ws-opts:
-    path: /ws-vmess
-    headers:
-      Host: ''
-  tls: true
-- name: TW+Chunghwa Telecom Co.
-  type: vmess
-  server: mdk.mdmekjll.best
-  port: 80
-  uuid: 6E571484-4166-4699-8F58-B34A1823691F
-  alterId: 0
-  cipher: auto
-  udp: true
-  network: ws
-  ws-opts:
-    path: /game/resources
-    headers:
-      Host: mdk.mdmekjll.best
-- name: US+CareTracker
-  type: vmess
-  server: 142.171.48.179
-  port: 28167
-  uuid: f949f286-b709-4617-8f26-2e0dfdd7ca6a
-  alterId: 0
-  cipher: auto
+  password: f426d3c9-fb43-43c0-868b-898dfa451a74
   udp: true
   network: ws
   ws-opts:
     path: /
     headers:
-      Host: gw.alicdn.com
+      Host: ''
+  tls: true
+  sni: likejennie.pages.dev
+  client-fingerprint: chrome
+- name: US+DotNet Solutions
+  type: vmess
+  server: 23.147.56.181
+  port: 52843
+  uuid: 88be793c-c368-4eb1-8809-057e5df96606
+  alterId: 0
+  cipher: auto
+  udp: true
 - name: US+Fastly
+  type: trojan
+  server: 167.82.64.120
+  port: 443
+  password: MiTiVPN
+  udp: true
+  network: ws
+  ws-opts:
+    path: /---@VPNine1---@VPNine1/---@VPNine1---@VPNine1/---@VPNine1---@VPNine1/NLSus---@VPNine1---@VPNine1/---@VPNine1---@VPNine1/---@VPNine1---@VPNine1
+    headers:
+      Host: mitivpn--mitivpn-mitivpn.ac.ir
+  tls: true
+  sni: cdn.akamai.steamstatic.com
+  client-fingerprint: chrome
+  skip-cert-verify: true
+  alpn:
+  - http/1.1
+- name: US+Fastly 2
+  type: trojan
+  server: 199.232.78.120
+  port: 443
+  password: MiTiVPN
+  udp: true
+  network: ws
+  ws-opts:
+    path: /---@GHOFLSHCAN---@GHOFLSHCAN/---@GHOFLSHCAN---@GHOFLSHCAN/---@GHOFLSHCAN---@GHOFLSHCAN/NLSus---@GHOFLSHCAN---@GHOFLSHCAN/---@GHOFLSHCAN---@GHOFLSHCAN/---@GHOFLSHCAN---@GHOFLSHCAN
+    headers:
+      Host: mitivpn-mitivpn-mitivpn.ac.ir
+  tls: true
+  sni: community.fastly.steamstatic.com
+  client-fingerprint: chrome
+  skip-cert-verify: true
+  alpn:
+  - http/1.1
+- name: US+Fastly 3
+  type: trojan
+  server: 146.75.57.120
+  port: 443
+  password: MiTiVPN
+  udp: true
+  network: ws
+  ws-opts:
+    path: /---@GHOFLSHCAN---@GHOFLSHCAN/---@GHOFLSHCAN---@GHOFLSHCAN/---@GHOFLSHCAN---@GHOFLSHCAN/NLSus---@GHOFLSHCAN---@GHOFLSHCAN/---@GHOFLSHCAN---@GHOFLSHCAN/---@GHOFLSHCAN---@GHOFLSHCAN
+    headers:
+      Host: mitivpn--mitivpn-mitivpn.ac.ir
+  tls: true
+  sni: firefox.com
+  client-fingerprint: chrome
+  skip-cert-verify: true
+  alpn:
+  - http/1.1
+- name: US+Fastly 4
   type: trojan
   server: 151.101.36.120
   port: 443
@@ -118,23 +147,20 @@ proxies:
   skip-cert-verify: true
   alpn:
   - http/1.1
-- name: US+Fastly 2
+- name: US+Zenfolio
   type: trojan
-  server: 146.75.57.120
+  server: 199.181.197.99
   port: 443
-  password: MiTiVPN
+  password: 70756c73-0000-4000-8000-650000000000
   udp: true
   network: ws
   ws-opts:
-    path: /---@GHOFLSHCAN---@GHOFLSHCAN/---@GHOFLSHCAN---@GHOFLSHCAN/---@GHOFLSHCAN---@GHOFLSHCAN/NLSus---@GHOFLSHCAN---@GHOFLSHCAN/---@GHOFLSHCAN---@GHOFLSHCAN/---@GHOFLSHCAN---@GHOFLSHCAN
+    path: /pulse
     headers:
-      Host: mitivpn--mitivpn-mitivpn.ac.ir
+      Host: parsa-panel-u48we.wotic15356.workers.dev
   tls: true
-  sni: firefox.com
-  client-fingerprint: android
-  skip-cert-verify: true
-  alpn:
-  - http/1.1
+  sni: parsa-panel-u48we.wotic15356.workers.dev
+  client-fingerprint: chrome
 proxy-groups:
 - name: 自动选择
   type: url-test
