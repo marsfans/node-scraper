@@ -3,15 +3,79 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: CN+Aliyun Computing
+- name: CA+Cloudflare
   type: vmess
-  server: 39.108.113.127
-  port: 10086
-  uuid: 19ee3050-be66-4850-9f13-fc9d47487a3c
+  server: 104.17.77.77
+  port: 8443
+  uuid: 60441548-b68e-43b2-8191-e3b884be4b3c
   alterId: 0
   cipher: auto
   udp: true
   network: ws
+  ws-opts:
+    path: /lMnsZUN4/
+    headers:
+      Host: v2ray1.dozapp.xyz
+  tls: true
+  servername: v2ray1.dozapp.xyz
+- name: CA+Cloudflare 2
+  type: vmess
+  server: 172.67.221.77
+  port: 443
+  uuid: 83b09a64-1eaf-4c4d-89ed-866d4b6b8115
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+  ws-opts:
+    path: /truth
+    headers:
+      Host: www.ubuntuupdates.com
+  tls: true
+  servername: www.ubuntuupdates.com
+- name: CA+Cloudflare 3
+  type: vmess
+  server: cf.877771.xyz
+  port: 443
+  uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: ''
+  tls: true
+  servername: vmess.lbw666.dpdns.org
+- name: CA+Cloudflare 4
+  type: vmess
+  server: 172.66.203.67
+  port: 443
+  uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+  ws-opts:
+    path: /ws?ed=2048
+    headers:
+      Host: vmess.lbw666.dpdns.org
+  tls: true
+  servername: vmess.lbw666.dpdns.org
+- name: CN+Aliyun Computing
+  type: vmess
+  server: 39.108.113.127
+  port: 10086
+  uuid: 4fc543d5-23ce-4556-ae2b-01685edd4397
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: ''
 - name: CN+Beijing Baidu Netcom Science and Technology
   type: vmess
   server: 120.48.133.162
@@ -25,11 +89,11 @@ proxies:
     path: /
     headers:
       Host: ''
-- name: DE+Alibaba.com Singapore E-Commerce Private
+- name: IN+Microsoft Azure Cloud
   type: vmess
-  server: 3E89CNW0HGtiFiDE.v.3dns.vip
+  server: 20.235.220.189
   port: 443
-  uuid: 32b241ccb2a547d7adbe03365155f8de
+  uuid: f23bb427-c1f9-4373-876c-2f43e9f790f3
   alterId: 0
   cipher: auto
   udp: true
@@ -37,130 +101,21 @@ proxies:
   ws-opts:
     path: /ws-vmess
     headers:
-      Host: 3E89CNW0HGtiFiDE.v.3dns.vip
-  tls: true
-  servername: 3E89CNW0HGtiFiDE.v.3dns.vip
-- name: MY+Alibaba.com
-  type: vmess
-  server: 47.250.135.244
-  port: 10000
-  uuid: aedc66b8-99d7-4a21-8310-61870e7f870d
-  alterId: 0
-  cipher: auto
-  udp: true
-- name: RU+LLC Vpsville
-  type: trojan
-  server: de-bots4.h1cloud.net
-  port: 25267
-  password: happybirthdaydaniel
-  udp: true
-  tls: true
-  client-fingerprint: android
-  skip-cert-verify: true
-- name: SE+Privex
-  type: trojan
-  server: 121.127.33.130
-  port: 443
-  password: f426d3c9-fb43-43c0-868b-898dfa451a74
-  udp: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
       Host: ''
   tls: true
-  sni: likejennie.pages.dev
-  client-fingerprint: chrome
-- name: US+DotNet Solutions
-  type: vmess
-  server: 23.147.56.181
-  port: 52843
-  uuid: 88be793c-c368-4eb1-8809-057e5df96606
-  alterId: 0
-  cipher: auto
-  udp: true
-- name: US+Fastly
+  servername: 6JDvArazgU3qQR6Q.v.3dns.vip
+- name: SE+Internetport Sweden
   type: trojan
-  server: 167.82.64.120
+  server: 95.143.196.97
   port: 443
-  password: MiTiVPN
+  password: FkQH0Q5EFneySv20Qj3yoArD2GSb2XZF
   udp: true
-  network: ws
-  ws-opts:
-    path: /---@VPNine1---@VPNine1/---@VPNine1---@VPNine1/---@VPNine1---@VPNine1/NLSus---@VPNine1---@VPNine1/---@VPNine1---@VPNine1/---@VPNine1---@VPNine1
-    headers:
-      Host: mitivpn--mitivpn-mitivpn.ac.ir
   tls: true
-  sni: cdn.akamai.steamstatic.com
-  client-fingerprint: chrome
-  skip-cert-verify: true
+  sni: connect-se.mimowhat.online
+  client-fingerprint: android
   alpn:
+  - h2
   - http/1.1
-- name: US+Fastly 2
-  type: trojan
-  server: 199.232.78.120
-  port: 443
-  password: MiTiVPN
-  udp: true
-  network: ws
-  ws-opts:
-    path: /---@GHOFLSHCAN---@GHOFLSHCAN/---@GHOFLSHCAN---@GHOFLSHCAN/---@GHOFLSHCAN---@GHOFLSHCAN/NLSus---@GHOFLSHCAN---@GHOFLSHCAN/---@GHOFLSHCAN---@GHOFLSHCAN/---@GHOFLSHCAN---@GHOFLSHCAN
-    headers:
-      Host: mitivpn-mitivpn-mitivpn.ac.ir
-  tls: true
-  sni: community.fastly.steamstatic.com
-  client-fingerprint: chrome
-  skip-cert-verify: true
-  alpn:
-  - http/1.1
-- name: US+Fastly 3
-  type: trojan
-  server: 146.75.57.120
-  port: 443
-  password: MiTiVPN
-  udp: true
-  network: ws
-  ws-opts:
-    path: /---@GHOFLSHCAN---@GHOFLSHCAN/---@GHOFLSHCAN---@GHOFLSHCAN/---@GHOFLSHCAN---@GHOFLSHCAN/NLSus---@GHOFLSHCAN---@GHOFLSHCAN/---@GHOFLSHCAN---@GHOFLSHCAN/---@GHOFLSHCAN---@GHOFLSHCAN
-    headers:
-      Host: mitivpn--mitivpn-mitivpn.ac.ir
-  tls: true
-  sni: firefox.com
-  client-fingerprint: chrome
-  skip-cert-verify: true
-  alpn:
-  - http/1.1
-- name: US+Fastly 4
-  type: trojan
-  server: 151.101.36.120
-  port: 443
-  password: MiTiVPN
-  udp: true
-  network: ws
-  ws-opts:
-    path: /---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/NLSus---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN
-    headers:
-      Host: mitivpn-mitivpn-mitivpn.ac.ir
-  tls: true
-  sni: community.fastly.steamstatic.com
-  client-fingerprint: chrome
-  skip-cert-verify: true
-  alpn:
-  - http/1.1
-- name: US+Zenfolio
-  type: trojan
-  server: 199.181.197.99
-  port: 443
-  password: 70756c73-0000-4000-8000-650000000000
-  udp: true
-  network: ws
-  ws-opts:
-    path: /pulse
-    headers:
-      Host: parsa-panel-u48we.wotic15356.workers.dev
-  tls: true
-  sni: parsa-panel-u48we.wotic15356.workers.dev
-  client-fingerprint: chrome
 proxy-groups:
 - name: 自动选择
   type: url-test
