@@ -3,66 +3,6 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: CA+Cloudflare
-  type: vmess
-  server: 104.17.77.77
-  port: 8443
-  uuid: 60441548-b68e-43b2-8191-e3b884be4b3c
-  alterId: 0
-  cipher: auto
-  udp: true
-  network: ws
-  ws-opts:
-    path: /lMnsZUN4/
-    headers:
-      Host: v2ray1.dozapp.xyz
-  tls: true
-  servername: v2ray1.dozapp.xyz
-- name: CA+Cloudflare 2
-  type: vmess
-  server: 172.67.221.77
-  port: 443
-  uuid: 83b09a64-1eaf-4c4d-89ed-866d4b6b8115
-  alterId: 0
-  cipher: auto
-  udp: true
-  network: ws
-  ws-opts:
-    path: /truth
-    headers:
-      Host: www.ubuntuupdates.com
-  tls: true
-  servername: www.ubuntuupdates.com
-- name: CA+Cloudflare 3
-  type: vmess
-  server: cf.877771.xyz
-  port: 443
-  uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
-  alterId: 0
-  cipher: auto
-  udp: true
-  network: ws
-  ws-opts:
-    path: /ws
-    headers:
-      Host: ''
-  tls: true
-  servername: vmess.lbw666.dpdns.org
-- name: CA+Cloudflare 4
-  type: vmess
-  server: 172.66.203.67
-  port: 443
-  uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
-  alterId: 0
-  cipher: auto
-  udp: true
-  network: ws
-  ws-opts:
-    path: /ws?ed=2048
-    headers:
-      Host: vmess.lbw666.dpdns.org
-  tls: true
-  servername: vmess.lbw666.dpdns.org
 - name: CN+Aliyun Computing
   type: vmess
   server: 39.108.113.127
@@ -80,7 +20,7 @@ proxies:
   type: vmess
   server: 120.48.133.162
   port: 10086
-  uuid: 4fc543d5-23ce-4556-ae2b-01685edd4397
+  uuid: 2a489513-46b5-488c-9899-9faaf2d83cd9
   alterId: 0
   cipher: auto
   udp: true
@@ -89,33 +29,37 @@ proxies:
     path: /
     headers:
       Host: ''
-- name: IN+Microsoft Azure Cloud
+- name: DE+Astra Networks
+  type: trojan
+  server: de-bots4.h1cloud.net
+  port: 25267
+  password: happybirthdaydaniel
+  udp: true
+  tls: true
+  client-fingerprint: android
+  skip-cert-verify: true
+- name: US+DotNet Solutions
   type: vmess
-  server: 20.235.220.189
-  port: 443
-  uuid: f23bb427-c1f9-4373-876c-2f43e9f790f3
+  server: 23.147.56.181
+  port: 52843
+  uuid: 88be793c-c368-4eb1-8809-057e5df96606
   alterId: 0
   cipher: auto
   udp: true
+- name: US+Zenfolio
+  type: trojan
+  server: 199.181.197.99
+  port: 443
+  password: 70756c73-0000-4000-8000-650000000000
+  udp: true
   network: ws
   ws-opts:
-    path: /ws-vmess
+    path: /pulse
     headers:
-      Host: ''
+      Host: parsa-panel-u48we.wotic15356.workers.dev
   tls: true
-  servername: 6JDvArazgU3qQR6Q.v.3dns.vip
-- name: SE+Internetport Sweden
-  type: trojan
-  server: 95.143.196.97
-  port: 443
-  password: FkQH0Q5EFneySv20Qj3yoArD2GSb2XZF
-  udp: true
-  tls: true
-  sni: connect-se.mimowhat.online
-  client-fingerprint: android
-  alpn:
-  - h2
-  - http/1.1
+  sni: parsa-panel-u48we.wotic15356.workers.dev
+  client-fingerprint: edge
 proxy-groups:
 - name: 自动选择
   type: url-test
