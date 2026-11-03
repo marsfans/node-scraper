@@ -3,63 +3,112 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: CN+Aliyun Computing
+- name: CA+Cloudflare
   type: vmess
-  server: 39.108.113.127
-  port: 10086
-  uuid: 4fc543d5-23ce-4556-ae2b-01685edd4397
+  server: 172.67.187.145
+  port: 80
+  uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
   alterId: 0
   cipher: auto
   udp: true
   network: ws
   ws-opts:
-    path: /
+    path: /ws?ed=2048
     headers:
-      Host: ''
-- name: CN+Beijing Baidu Netcom Science and Technology
+      Host: vmess.lbw666.dpdns.org
+- name: CA+Cloudflare 2
   type: vmess
-  server: 120.48.133.162
-  port: 10086
-  uuid: 2a489513-46b5-488c-9899-9faaf2d83cd9
+  server: 104.17.147.222
+  port: 80
+  uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
   alterId: 0
   cipher: auto
   udp: true
   network: ws
   ws-opts:
-    path: /
+    path: /ws
     headers:
-      Host: ''
-- name: DE+Astra Networks
-  type: trojan
-  server: de-bots4.h1cloud.net
-  port: 25267
-  password: happybirthdaydaniel
-  udp: true
-  tls: true
-  client-fingerprint: android
-  skip-cert-verify: true
-- name: US+DotNet Solutions
+      Host: vmess.lbw666.dpdns.org
+- name: HK+Alibaba Cloud - HK
   type: vmess
-  server: 23.147.56.181
-  port: 52843
-  uuid: 88be793c-c368-4eb1-8809-057e5df96606
-  alterId: 0
-  cipher: auto
-  udp: true
-- name: US+Zenfolio
-  type: trojan
-  server: 199.181.197.99
+  server: 47.243.194.125
   port: 443
-  password: 70756c73-0000-4000-8000-650000000000
+  uuid: f23bb427-c1f9-4373-876c-2f43e9f790f3
+  alterId: 0
+  cipher: auto
   udp: true
   network: ws
   ws-opts:
-    path: /pulse
+    path: /ws-vmess
     headers:
-      Host: parsa-panel-u48we.wotic15356.workers.dev
+      Host: nycqg19zkwacpm1b.v.3dns.vip
   tls: true
-  sni: parsa-panel-u48we.wotic15356.workers.dev
-  client-fingerprint: edge
+  servername: nycqg19zkwacpm1b.v.3dns.vip
+- name: HK+Alibaba.com Singapore E-Commerce Private
+  type: vmess
+  server: qtkdr8jxe3wefxjm.v.3dns.vip
+  port: 443
+  uuid: f23bb427-c1f9-4373-876c-2f43e9f790f3
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+  ws-opts:
+    path: /ws-vmess
+    headers:
+      Host: ''
+  tls: true
+  servername: qtkdr8jxe3wefxjm.v.3dns.vip
+- name: HK+Alibaba.com Singapore E-Commerce Private 2
+  type: vmess
+  server: 2b9hwy8ocx7q74nm.v.3dns.vip
+  port: 443
+  uuid: f23bb427c1f94373876c2f43e9f790f3
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+  ws-opts:
+    path: /ws-vmess
+    headers:
+      Host: ''
+  tls: true
+- name: IN+Microsoft Azure Cloud
+  type: vmess
+  server: 20.235.220.189
+  port: 443
+  uuid: f23bb427-c1f9-4373-876c-2f43e9f790f3
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+  ws-opts:
+    path: /ws-vmess
+    headers:
+      Host: 6JDvArazgU3qQR6Q.v.3dns.vip
+  tls: true
+  servername: 6JDvArazgU3qQR6Q.v.3dns.vip
+- name: KR+Oracle Cloud Infrastructure
+  type: vmess
+  server: 132.145.80.230
+  port: 80
+  uuid: 5155860e-d07d-46c3-9128-3afbd84626c7
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+  ws-opts:
+    path: /cctv13.m3u8
+    headers:
+      Host: 'null'
+- name: TH+True Internet Corporation CO.
+  type: vmess
+  server: 119.46.51.45
+  port: 37515
+  uuid: 9b76bc31-17a5-4454-934a-8d5fb602cd70
+  alterId: 0
+  cipher: auto
+  udp: true
 proxy-groups:
 - name: 自动选择
   type: url-test
