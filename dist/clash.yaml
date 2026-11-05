@@ -5,8 +5,131 @@ log-level: info
 proxies:
 - name: CA+Cloudflare
   type: vmess
-  server: 104.21.7.133
-  port: 80
+  server: www.gptcloudai.com
+  port: 443
+  uuid: e70a5b70-f63c-4450-af8b-94990cdf80c0
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+  ws-opts:
+    path: /truth
+    headers:
+      Host: ''
+  tls: true
+- name: CA+Cloudflare 10
+  type: vmess
+  server: 162.159.135.234
+  port: 2083
+  uuid: ac251237-576f-40c8-a543-554960c958b1
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+  ws-opts:
+    path: /or3
+    headers:
+      Host: or3.sfacg.uk
+  tls: true
+  servername: or3.sfacg.uk
+- name: CA+Cloudflare 11
+  type: vmess
+  server: www.windowssearchtools.com
+  port: 443
+  uuid: ba1116e2-8c2f-4e3d-8e50-c954360cf970
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+  ws-opts:
+    path: /truth
+    headers:
+      Host: www.windowssearchtools.com
+  tls: true
+  servername: www.windowssearchtools.com
+- name: CA+Cloudflare 2
+  type: trojan
+  server: chess.com
+  port: 2087
+  password: Telegram--CONFIG7X--CONFIG7X--CONFIG7X--CONFIG7X--CONFIG7X--CONFIG7X--CONFIG7X--CONFIG7X-
+  udp: true
+  network: xhttp
+  tls: true
+  sni: cdn.config7x.site
+  client-fingerprint: chrome
+- name: CA+Cloudflare 3
+  type: vmess
+  server: 104.17.77.77
+  port: 8443
+  uuid: 60441548-b68e-43b2-8191-e3b884be4b3c
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+  ws-opts:
+    path: /lMnsZUN4/
+    headers:
+      Host: ''
+  tls: true
+  servername: v2ray1.dozapp.xyz
+- name: CA+Cloudflare 4
+  type: vmess
+  server: or3.sfacg.uk
+  port: 2083
+  uuid: ac251237-576f-40c8-a543-554960c958b1
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+  ws-opts:
+    path: /or3
+    headers:
+      Host: ''
+  tls: true
+- name: CA+Cloudflare 5
+  type: trojan
+  server: 104.24.0.1
+  port: 2053
+  password: gHQP0D7D15
+  udp: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: marvdasht.phonecomparisonblog.org
+  tls: true
+  sni: marvdasht.phonecomparisonblog.org
+- name: CA+Cloudflare 6
+  type: vmess
+  server: cf.0sm.com
+  port: 443
+  uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+  ws-opts:
+    path: /ws?ed=2048
+    headers:
+      Host: vmess.lbw666.dpdns.org
+  tls: true
+- name: CA+Cloudflare 7
+  type: trojan
+  server: chatgpt.com
+  port: 443
+  password: Telegram--CONFIG7X--CONFIG7X--CONFIG7X--CONFIG7X--CONFIG7X--CONFIG7X--CONFIG7X--CONFIG7X-
+  udp: true
+  network: ws
+  ws-opts:
+    path: /7x-tj-cdn
+    headers:
+      Host: cdn.config7x.site
+  tls: true
+  sni: cdn.config7x.site
+- name: CA+Cloudflare 8
+  type: vmess
+  server: 172.66.203.67
+  port: 443
   uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
   alterId: 0
   cipher: auto
@@ -16,32 +139,22 @@ proxies:
     path: /ws
     headers:
       Host: vmess.lbw666.dpdns.org
-- name: CN+Aliyun Computing
+  tls: true
+- name: CA+Cloudflare 9
   type: vmess
-  server: 39.108.113.127
-  port: 10086
-  uuid: 4fc543d5-23ce-4556-ae2b-01685edd4397
+  server: 172.67.153.127
+  port: 443
+  uuid: 80be2deb-3b27-4775-9bd1-7f2a2b9c261b
   alterId: 0
   cipher: auto
   udp: true
   network: ws
   ws-opts:
-    path: /
-    headers:
-      Host: ''
-- name: DE+xTom
-  type: vmess
-  server: de.zhou-yufan.com
-  port: 443
-  uuid: f38e591d-d13a-4c30-9763-6be3ad65f3ec
-  alterId: 0
-  cipher: auto
-  udp: true
-  ws-opts:
-    path: /
+    path: /truth
     headers:
       Host: ''
   tls: true
+  servername: www.windowsmsidownloads.com
 - name: IR+Toloe Rayaneh Loghman Educational and Cultural Co.
   type: vmess
   server: getnet.serversubasli.top
@@ -56,38 +169,34 @@ proxies:
     headers:
       Host: ''
   tls: true
-- name: US+Notion Labs
+  servername: getnet.serversubasli.top
+- name: MY+Alibaba.com
+  type: vmess
+  server: 47.250.135.244
+  port: 10000
+  uuid: aedc66b8-99d7-4a21-8310-61870e7f870d
+  alterId: 0
+  cipher: auto
+  udp: true
+  ws-opts:
+    headers:
+      Host: 47.250.135.244
+- name: US+Visa International Service Association
   type: trojan
-  server: 208.103.161.16
-  port: 2096
-  password: hWsj5AwIRPF8
+  server: 199.68.156.121
+  port: 2087
+  password: 7bpe9s002exll38s
   udp: true
   network: ws
   ws-opts:
-    path: /?ed=2560
+    path: /wss
     headers:
-      Host: rayAnconfIg3-Bhl0ai7j-t2.raYan-coNfig-3.woRKers.dEV
+      Host: nexoshop.netvia.ir
   tls: true
-  sni: rayAnconfIg3-Bhl0ai7j-t2.raYan-coNfig-3.woRKers.dEV
-  client-fingerprint: chrome
-- name: US+Pfcloud UG
-  type: trojan
-  server: 31.57.185.134
-  port: 8443
-  password: YektaCloud
-  udp: true
-  network: ws
-  ws-opts:
-    path: /TELEGRAM----@YektaCloud----@YektaCloud----@YektaCloud----@YektaCloud----@YektaCloud----@YektaCloud----@YektaCloud----@YektaCloud----@YektaCloud----@YektaCloud----@YektaCloud----@YektaCloud----@YektaCloud----@YektaCloud----@YektaCloud----@YektaCloud
-    headers:
-      Host: ''
-  tls: true
-  client-fingerprint: android
-  skip-cert-verify: true
+  sni: nexoshop.netvia.ir
+  client-fingerprint: firefox
   alpn:
   - http/1.1
-  - h3
-  - h2
 proxy-groups:
 - name: 自动选择
   type: url-test
