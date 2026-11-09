@@ -5,70 +5,6 @@ log-level: info
 proxies:
 - name: CA+CloudFlare
   type: trojan
-  server: 188.114.97.9
-  port: 443
-  password: TsX0XJKMa2h$CbKr0k
-  udp: true
-  network: ws
-  ws-opts:
-    path: /tr/mPwnfIHtx0vldKy0A5AGJTZB
-    headers:
-      Host: ''
-  tls: true
-  sni: IDB8onmVBntUyt5T7T6cEjFW8VLRB.PAGES.DeV
-  client-fingerprint: chrome
-  alpn:
-  - http/1.1
-- name: CA+CloudFlare 2
-  type: trojan
-  server: 188.114.96.3
-  port: 2096
-  password: vP!XvZBNdw.e*ddSgmH!
-  udp: true
-  network: ws
-  ws-opts:
-    path: /tr/ZFttmjSqvda5ohOQ?ed=2560
-    headers:
-      Host: n0q4xprj2d4x4prcq29l8jkczd0.pages.dev
-  tls: true
-  sni: n0q4XPrJ2D4X4PRCQ29L8JKCZd0.pAGES.dev
-  client-fingerprint: chrome
-  alpn:
-  - http/1.1
-- name: CA+CloudFlare 3
-  type: trojan
-  server: 188.114.97.0
-  port: 443
-  password: e7TTceggMwUMg+aFN:F4
-  udp: true
-  network: ws
-  ws-opts:
-    path: /tr/K6yFgCX8e93ySqOO4K?ed=2560
-    headers:
-      Host: apkd964o1oghltghht0l0of.pages.dev
-  tls: true
-  sni: Apkd964o1oghltGhhT0L0oF.PAGEs.DeV
-  client-fingerprint: android
-  alpn:
-  - http/1.1
-- name: CA+CloudFlare 4
-  type: trojan
-  server: 188.114.96.0
-  port: 2096
-  password: vP!XvZBNdw.e*ddSgmH!
-  udp: true
-  network: ws
-  ws-opts:
-    path: /tr/lqCTAonDgcErIZylZuNyy?ed=2560
-    headers:
-      Host: n0q4xprj2d4x4prcq29l8jkczd0.pages.dev
-  tls: true
-  sni: N0Q4xprJ2d4X4pRCQ29l8JkcZd0.paGES.DeV
-  client-fingerprint: chrome
-  alpn:
-  - http/1.1
-- name: CA+CloudFlare 5
-  type: trojan
   server: 188.114.98.0
   port: 443
   password: 883e3cc8-9613-4f2d-8c42-0dd3d429db55
@@ -97,155 +33,7 @@ proxies:
   tls: true
   sni: ltf8.jueson.de5.net
   client-fingerprint: chrome
-- name: CA+Cloudflare 10
-  type: vmess
-  server: 172.66.203.67
-  port: 443
-  uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
-  alterId: 0
-  cipher: auto
-  udp: true
-  network: ws
-  ws-opts:
-    path: /ws
-    headers:
-      Host: vmess.lbw666.dpdns.org
-  tls: true
-  servername: vmess.lbw666.dpdns.org
-- name: CA+Cloudflare 11
-  type: vmess
-  server: cdn.sfacg.uk
-  port: 2083
-  uuid: ac251237-576f-40c8-a543-554960c958b1
-  alterId: 0
-  cipher: auto
-  udp: true
-  network: ws
-  ws-opts:
-    path: /or3
-    headers:
-      Host: or3.sfacg.uk
-  tls: true
-  servername: or3.sfacg.uk
-- name: CA+Cloudflare 12
-  type: trojan
-  server: www.wto.org
-  port: 8443
-  password: ec1fa47d-4eac-4b3f-8cae-4a2982d43e2f
-  udp: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: ''
-  tls: true
-  sni: jiangjc.pages.dev
-- name: CA+Cloudflare 13
-  type: trojan
-  server: russia.com
-  port: 443
-  password: bpb-trojan
-  udp: true
-  network: ws
-  ws-opts:
-    path: /tr?ed=2560
-    headers:
-      Host: kargar001.pages.dev
-  tls: true
-  sni: kargar001.pages.dev
-  client-fingerprint: randomized
-  alpn:
-  - h3
-- name: CA+Cloudflare 14
-  type: trojan
-  server: 104.19.173.68
-  port: 443
-  password: d0298536-d670-4045-bbb1-ddd5ea68683e
-  udp: true
-  network: ws
-  ws-opts:
-    path: /azadnet-5vk.pages.dev/?ed=2560&PROT_TYPE=trojan
-    headers:
-      Host: ''
-  tls: true
-  sni: azadnet-5vk.pages.dev
-  client-fingerprint: chrome
-- name: CA+Cloudflare 15
-  type: trojan
-  server: 104.16.148.5
-  port: 443
-  password: 19877587-ed94-4033-88cd-4ac50a5e8718
-  udp: true
-  network: ws
-  ws-opts:
-    path: /WangCai-8
-    headers:
-      Host: dimskiee.biz.id
-  tls: true
-  sni: dimskiee.biz.id
-  skip-cert-verify: true
-- name: CA+Cloudflare 16
-  type: vmess
-  server: 104.21.57.84
-  port: 8443
-  uuid: 60441548-b68e-43b2-8191-e3b884be4b3c
-  alterId: 0
-  cipher: auto
-  udp: true
-  network: ws
-  ws-opts:
-    path: /lMnsZUN4/
-    headers:
-      Host: v2ray1.dozapp.xyz
-  tls: true
-  servername: v2ray1.dozapp.xyz
-- name: CA+Cloudflare 17
-  type: trojan
-  server: 104.18.43.174
-  port: 443
-  password: xhl549341
-  udp: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: ''
-  tls: true
-  sni: tro.baiyi.cloudns.org
-  client-fingerprint: chrome
-  alpn:
-  - h3
-- name: CA+Cloudflare 18
-  type: vmess
-  server: or3.sfacg.uk
-  port: 2083
-  uuid: ac251237-576f-40c8-a543-554960c958b1
-  alterId: 0
-  cipher: auto
-  udp: true
-  network: ws
-  ws-opts:
-    path: /or3
-    headers:
-      Host: ''
-  tls: true
 - name: CA+Cloudflare 2
-  type: trojan
-  server: 172.66.47.18
-  port: 443
-  password: e7TTceggMwUMg+aFN:F4
-  udp: true
-  network: ws
-  ws-opts:
-    path: /tr/SIeRkg2QvR2Zcpu0SeEMow?ed=2560
-    headers:
-      Host: apkd964o1oghltghht0l0of.pages.dev
-  tls: true
-  sni: APkD964o1oghlTghHt0L0Of.pAgeS.Dev
-  client-fingerprint: chrome
-  alpn:
-  - http/1.1
-- name: CA+Cloudflare 3
   type: vmess
   server: 162.159.128.17
   port: 443
@@ -260,22 +48,38 @@ proxies:
       Host: v2ray.ryin.vip
   tls: true
   servername: v2ray.ryin.vip
-- name: CA+Cloudflare 4
-  type: trojan
-  server: 172.64.80.1
+- name: CA+Cloudflare 3
+  type: vmess
+  server: 104.17.136.198
   port: 443
-  password: bpb-trojan
+  uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
+  alterId: 0
+  cipher: auto
   udp: true
   network: ws
   ws-opts:
-    path: /tr?ed=2560
+    path: /ws
+    headers:
+      Host: vmess.lbw666.dpdns.org
+  tls: true
+- name: CA+Cloudflare 4
+  type: vmess
+  server: 104.21.91.53
+  port: 8443
+  uuid: 60441548-b68e-43b2-8191-e3b884be4b3c
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+  ws-opts:
+    path: /lMnsZUN4/
     headers:
       Host: ''
   tls: true
-  sni: vless.herogoing.top
+  servername: v2ray1.dozapp.xyz
 - name: CA+Cloudflare 5
   type: vmess
-  server: cf.090227.xyz
+  server: 172.64.229.21
   port: 443
   uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
   alterId: 0
@@ -287,100 +91,7 @@ proxies:
     headers:
       Host: vmess.lbw666.dpdns.org
   tls: true
-- name: CA+Cloudflare 6
-  type: trojan
-  server: floral-grass-aa1e.dianawpewpek1.workers.dev
-  port: 443
-  password: uFepQ5r4JSusbY
-  udp: true
-  network: ws
-  ws-opts:
-    path: /?ed=2048
-    headers:
-      Host: floral-grass-aa1e.dianawpewpek1.workers.dev
-  tls: true
-  sni: floral-grass-aa1e.dianawpewpek1.workers.dev
-  client-fingerprint: chrome
-  alpn:
-  - http/1.1
-- name: CA+Cloudflare 7
-  type: trojan
-  server: 172.64.145.158
-  port: 443
-  password: xhl549341
-  udp: true
-  network: ws
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: tro.baiyi.cloudns.org
-  tls: true
-  sni: tro.baiyi.cloudns.org
-  client-fingerprint: chrome
-  alpn:
-  - h3
-- name: CA+Cloudflare 8
-  type: trojan
-  server: 4okhrijuyjytflnvowhl3zfw5wsgi34o.pages.dev
-  port: 443
-  password: Nd2bFutZK2ma29bYqC@z
-  udp: true
-  network: ws
-  ws-opts:
-    path: /tr/2W6ONoBA1CTMk80znuAVgQ9dvWey2KD8?ed=2560
-    headers:
-      Host: 4okhrijuyjytflnvowhl3zfw5wsgi34o.pages.dev
-  tls: true
-  sni: 4oKhrijUyjyTFlnvoWhL3ZFW5wSGI34O.PAGeS.DeV
-  client-fingerprint: chrome
-  alpn:
-  - http/1.1
-- name: CA+Cloudflare 9
-  type: trojan
-  server: 104.24.210.142
-  port: 443
-  password: 50414e45-4c5f-5a45-5553-ccc0e8cd3a83
-  udp: true
-  network: ws
-  ws-opts:
-    path: /stream/PANEL_ZEUS/ccc0e8cd3a83
-    headers:
-      Host: fgzb39ezu86s.ycz7syeeu3is.workers.dev
-  tls: true
-  sni: fgzb39ezu86s.ycz7syeeu3is.workers.dev
-  client-fingerprint: unsafe
-- name: HK+Tencent Cloud Computing
-  type: vmess
-  server: 101.32.187.182
-  port: 10898
-  uuid: b6b14ef7-a769-406f-9df7-31790ff7a920
-  alterId: 0
-  cipher: auto
-  udp: true
-- name: HK+Tencent Cloud Computing 2
-  type: vmess
-  server: 43.159.7.24
-  port: 11353
-  uuid: d105eadc-c3ea-4a82-a299-373d75f2d2b7
-  alterId: 0
-  cipher: auto
-  udp: true
-- name: JP+ByteVirt
-  type: vmess
-  server: 141.11.139.102
-  port: 32515
-  uuid: 081dbf5a-d8b6-40c8-96f8-3c4ca9f50442
-  alterId: 0
-  cipher: auto
-  udp: true
-- name: MY+TT DOTCOM SDN BHD
-  type: vmess
-  server: 192.228.138.161
-  port: 10086
-  uuid: b831381d-6324-4d53-ad4f-8cda48b30811
-  alterId: 0
-  cipher: auto
-  udp: true
+  servername: vmess.lbw666.dpdns.org
 - name: SG+SGCABLEVISION
   type: vmess
   server: 116.88.224.217
@@ -397,40 +108,6 @@ proxies:
   alterId: 0
   cipher: auto
   udp: true
-- name: US+Fastly
-  type: trojan
-  server: 151.101.36.7
-  port: 443
-  password: MiTiVPN
-  udp: true
-  network: ws
-  ws-opts:
-    path: /---@MiTiVPN---@MiTiVPN
-    headers:
-      Host: Abu.ac.ir
-  tls: true
-  sni: cdn.akamai.steamstatic.com
-  client-fingerprint: chrome
-  skip-cert-verify: true
-  alpn:
-  - http/1.1
-- name: US+Fastly 2
-  type: trojan
-  server: 167.82.64.7
-  port: 443
-  password: MiTiVPN
-  udp: true
-  network: ws
-  ws-opts:
-    path: /---@MiTiVPN---@MiTiVPN
-    headers:
-      Host: MiTiVPN-1-mitivpn.ac.ir
-  tls: true
-  sni: cdn.akamai.steamstatic.com
-  client-fingerprint: chrome
-  skip-cert-verify: true
-  alpn:
-  - http/1.1
 proxy-groups:
 - name: 自动选择
   type: url-test
