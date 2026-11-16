@@ -3,155 +3,7 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: CA+CloudFlare
-  type: trojan
-  server: 188.114.96.3
-  port: 2096
-  password: vP!XvZBNdw.e*ddSgmH!
-  udp: true
-  network: ws
-  ws-opts:
-    path: /tr/ZFttmjSqvda5ohOQ?ed=2560
-    headers:
-      Host: n0q4xprj2d4x4prcq29l8jkczd0.pages.dev
-  tls: true
-  sni: n0q4XPrJ2D4X4PRCQ29L8JKCZd0.pAGES.dev
-  client-fingerprint: chrome
-  alpn:
-  - http/1.1
-- name: CA+CloudFlare 2
-  type: trojan
-  server: 188.114.97.0
-  port: 443
-  password: e7TTceggMwUMg+aFN
-  udp: true
-  network: ws
-  ws-opts:
-    path: /tr/K6yFgCX8e93ySqOO4K?ed=2560
-    headers:
-      Host: apkd964o1oghltghht0l0of.pages.dev
-  tls: true
-  sni: Apkd964o1oghltGhhT0L0oF.PAGEs.DeV
-  client-fingerprint: android
-  skip-cert-verify: true
-  alpn:
-  - http/1.1
-- name: CA+CloudFlare 3
-  type: trojan
-  server: 188.114.96.0
-  port: 2096
-  password: vP!XvZBNdw.e*ddSgmH!
-  udp: true
-  network: ws
-  ws-opts:
-    path: /tr/lqCTAonDgcErIZylZuNyy?ed=2560
-    headers:
-      Host: n0q4xprj2d4x4prcq29l8jkczd0.pages.dev
-  tls: true
-  sni: N0Q4xprJ2d4X4pRCQ29l8JkcZd0.paGES.DeV
-  client-fingerprint: chrome
-  alpn:
-  - http/1.1
 - name: CA+Cloudflare
-  type: trojan
-  server: 104.20.26.192
-  port: 2053
-  password: IDgAbZbs8cZw
-  udp: true
-  network: ws
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: rAyan02-1d7cmk9v-t3.rayAn-02.worKers.dEV
-  tls: true
-  sni: rAyan02-1d7cmk9v-t3.rayAn-02.worKers.dEV
-  client-fingerprint: chrome
-- name: CA+Cloudflare 10
-  type: vmess
-  server: 104.27.0.1
-  port: 443
-  uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
-  alterId: 0
-  cipher: auto
-  udp: true
-  network: ws
-  ws-opts:
-    path: /ws
-    headers:
-      Host: vmess.lbw666.dpdns.org
-  tls: true
-- name: CA+Cloudflare 11
-  type: trojan
-  server: russia.com
-  port: 443
-  password: bpb-trojan
-  udp: true
-  network: ws
-  ws-opts:
-    path: /tr?ed=2560
-    headers:
-      Host: ''
-  tls: true
-  sni: kargar001.pages.dev
-  client-fingerprint: randomized
-  alpn:
-  - h3
-- name: CA+Cloudflare 12
-  type: trojan
-  server: 104.19.45.195
-  port: 443
-  password: pH[]S[Bh:_:D6T4k
-  udp: true
-  network: ws
-  ws-opts:
-    path: /trsVu9Ualb1DOfGjpw
-    headers:
-      Host: ''
-  tls: true
-  sni: AZaDneT-692.PagEs.DEv
-  client-fingerprint: android
-- name: CA+Cloudflare 13
-  type: vmess
-  server: 162.159.128.17
-  port: 443
-  uuid: c8b455ad-fff1-43e9-9af9-d97585c4534a
-  alterId: 0
-  cipher: auto
-  udp: true
-  network: ws
-  ws-opts:
-    path: /ryinsocksv2board
-    headers:
-      Host: v2ray.ryin.vip
-  tls: true
-  servername: v2ray.ryin.vip
-- name: CA+Cloudflare 2
-  type: trojan
-  server: 104.26.6.171
-  port: 443
-  password: reinz
-  udp: true
-  network: ws
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: tsg3.pages.dev
-  tls: true
-  sni: tsg3.pages.dev
-- name: CA+Cloudflare 3
-  type: trojan
-  server: 172.64.152.234
-  port: 443
-  password: 558e3e91-0ffa-4180-9386-5813fa7c3cb1
-  udp: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: ''
-  tls: true
-  sni: pz333.pzmike.dpdns.org
-- name: CA+Cloudflare 4
   type: vmess
   server: 104.21.57.84
   port: 8443
@@ -166,51 +18,9 @@ proxies:
       Host: ''
   tls: true
   servername: v2ray1.dozapp.xyz
-- name: CA+Cloudflare 5
-  type: trojan
-  server: 104.19.173.68
-  port: 443
-  password: d0298536-d670-4045-bbb1-ddd5ea68683e
-  udp: true
-  network: ws
-  ws-opts:
-    path: /azadnet-5vk.pages.dev/?ed=2560&PROT_TYPE=trojan
-    headers:
-      Host: ''
-  tls: true
-  sni: azadnet-5vk.pages.dev
-  client-fingerprint: chrome
-- name: CA+Cloudflare 6
+- name: CA+Cloudflare 2
   type: vmess
-  server: 104.17.0.1
-  port: 2083
-  uuid: ac251237-576f-40c8-a543-554960c958b1
-  alterId: 0
-  cipher: auto
-  udp: true
-  network: ws
-  ws-opts:
-    path: /or3
-    headers:
-      Host: or3.sfacg.uk
-  tls: true
-  servername: or3.sfacg.uk
-- name: CA+Cloudflare 7
-  type: trojan
-  server: 172.66.47.18
-  port: 443
-  password: e7TTceggMwUMg+aFN
-  udp: true
-  network: ws
-  ws-opts:
-    path: /tr/SIeRkg2QvR2Zcpu0SeEMow?ed=2560
-    headers:
-      Host: ''
-  tls: true
-  sni: APkD964o1oghlTghHt0L0Of.pAgeS.Dev
-- name: CA+Cloudflare 8
-  type: vmess
-  server: 172.67.152.183
+  server: cf.090227.xyz
   port: 443
   uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
   alterId: 0
@@ -220,31 +30,32 @@ proxies:
   ws-opts:
     path: /ws?ed=2048
     headers:
-      Host: ''
+      Host: vmess.lbw666.dpdns.org
   tls: true
-  servername: vmess.lbw666.dpdns.org
-- name: CA+Cloudflare 9
+- name: CA+Cloudflare 3
   type: vmess
-  server: or3.sfacg.uk
-  port: 2083
-  uuid: ac251237-576f-40c8-a543-554960c958b1
+  server: cf.877771.xyz
+  port: 443
+  uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
   alterId: 0
   cipher: auto
   udp: true
   network: ws
   ws-opts:
-    path: /or3
+    path: /ws
     headers:
       Host: ''
   tls: true
+  servername: vmess.lbw666.dpdns.org
 - name: HK+AWS EC2
   type: trojan
-  server: 16.106.7.232
+  server: sclass-c1.catcat321.com
   port: 20086
   password: d9064589-74af-432a-9390-5d8a9da281bf
   udp: true
   tls: true
   sni: hk.catxstar.com
+  client-fingerprint: android
 - name: MY+TT DOTCOM SDN BHD
   type: vmess
   server: 192.228.145.118
@@ -257,14 +68,21 @@ proxies:
     path: /
     headers:
       Host: ''
-- name: SG+Viewqwest Pte
-  type: vmess
-  server: 195.133.135.238
-  port: 10086
-  uuid: b831381d-6324-4d53-ad4f-8cda48b30811
-  alterId: 0
-  cipher: auto
+- name: US+Fastly
+  type: trojan
+  server: ipfast.kingmna.com
+  port: 443
+  password: SiFvGI5bX01GGtGOJ2_nxA
   udp: true
+  network: ws
+  ws-opts:
+    path: /TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER
+    headers:
+      Host: copy_az_channel_NUFiLTER_10i.global.ssl.fastly.net.
+  tls: true
+  sni: cdn.akamai.steamstatic.com
+  client-fingerprint: android
+  skip-cert-verify: true
 - name: US+WPEngine
   type: vmess
   server: 141.193.213.21
@@ -280,20 +98,6 @@ proxies:
       Host: matrix.phonicsindia.mobi
   tls: true
   servername: matrix.phonicsindia.mobi
-- name: US+Zenfolio
-  type: trojan
-  server: 199.181.197.99
-  port: 443
-  password: 70756c73-0000-4000-8000-650000000000
-  udp: true
-  network: ws
-  ws-opts:
-    path: /pulse
-    headers:
-      Host: parsa-panel-u48we.wotic15356.workers.dev
-  tls: true
-  sni: parsa-panel-u48we.wotic15356.workers.dev
-  client-fingerprint: safari
 proxy-groups:
 - name: 自动选择
   type: url-test
