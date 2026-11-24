@@ -5,37 +5,7 @@ log-level: info
 proxies:
 - name: CA+Cloudflare
   type: vmess
-  server: 172.66.0.1
-  port: 8443
-  uuid: 60441548-b68e-43b2-8191-e3b884be4b3c
-  alterId: 0
-  cipher: auto
-  udp: true
-  network: ws
-  ws-opts:
-    path: /lMnsZUN4/
-    headers:
-      Host: v2ray1.dozapp.xyz
-  tls: true
-  servername: v2ray1.dozapp.xyz
-- name: CA+Cloudflare 2
-  type: vmess
-  server: 104.25.0.1
-  port: 2083
-  uuid: ac251237-576f-40c8-a543-554960c958b1
-  alterId: 0
-  cipher: auto
-  udp: true
-  network: ws
-  ws-opts:
-    path: /or3
-    headers:
-      Host: or3.sfacg.uk
-  tls: true
-  servername: or3.sfacg.uk
-- name: CA+Cloudflare 3
-  type: vmess
-  server: 172.64.229.21
+  server: 104.17.136.198
   port: 443
   uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
   alterId: 0
@@ -48,9 +18,38 @@ proxies:
       Host: vmess.lbw666.dpdns.org
   tls: true
   servername: vmess.lbw666.dpdns.org
+- name: CA+Cloudflare 2
+  type: vmess
+  server: 104.17.0.1
+  port: 2083
+  uuid: ac251237-576f-40c8-a543-554960c958b1
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+  ws-opts:
+    path: /or3
+    headers:
+      Host: or3.sfacg.uk
+  tls: true
+- name: CA+Cloudflare 3
+  type: vmess
+  server: chatgpt.com
+  port: 8443
+  uuid: 60441548-b68e-43b2-8191-e3b884be4b3c
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+  ws-opts:
+    path: /lMnsZUN4/
+    headers:
+      Host: ''
+  tls: true
+  servername: v2ray1.dozapp.xyz
 - name: CA+Cloudflare 4
   type: vmess
-  server: 104.17.136.198
+  server: cf.0sm.com
   port: 443
   uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
   alterId: 0
@@ -62,21 +61,28 @@ proxies:
     headers:
       Host: vmess.lbw666.dpdns.org
   tls: true
-  servername: vmess.lbw666.dpdns.org
-- name: CA+Cloudflare 5
+- name: JP+AWS EC2
+  type: trojan
+  server: win2loxfde0303.gggrelay.org
+  port: 34745
+  password: 57beeeb0-03fc-4fc9-94da-7604488a7134
+  udp: true
+  tls: true
+  sni: nu3rb.supertoolify.com
+  client-fingerprint: chrome
+  skip-cert-verify: true
+- name: SG+Viewqwest Pte
   type: vmess
-  server: or3.sfacg.uk
-  port: 2083
-  uuid: ac251237-576f-40c8-a543-554960c958b1
+  server: 195.133.135.238
+  port: 10086
+  uuid: b831381d-6324-4d53-ad4f-8cda48b30811
   alterId: 0
   cipher: auto
   udp: true
-  network: ws
   ws-opts:
-    path: /or3
+    path: /
     headers:
       Host: ''
-  tls: true
 - name: US+Fastly
   type: trojan
   server: ipfast.kingmna.com
