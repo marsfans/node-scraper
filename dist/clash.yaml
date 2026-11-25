@@ -3,30 +3,9 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: BY+SERV.HOST GROUP
-  type: trojan
-  server: 179.254.191.2
-  port: 39105
-  password: jyneij42qcfg3x9f
-  udp: true
 - name: CA+Cloudflare
   type: vmess
-  server: cdn.sfacg.uk
-  port: 2083
-  uuid: ac251237-576f-40c8-a543-554960c958b1
-  alterId: 0
-  cipher: auto
-  udp: true
-  network: ws
-  ws-opts:
-    path: /or3
-    headers:
-      Host: or3.sfacg.uk
-  tls: true
-  servername: or3.sfacg.uk
-- name: CA+Cloudflare 2
-  type: vmess
-  server: 104.17.77.77
+  server: chatgpt.com
   port: 8443
   uuid: 60441548-b68e-43b2-8191-e3b884be4b3c
   alterId: 0
@@ -39,24 +18,9 @@ proxies:
       Host: v2ray1.dozapp.xyz
   tls: true
   servername: v2ray1.dozapp.xyz
-- name: CA+Cloudflare 3
+- name: CA+Cloudflare 2
   type: vmess
-  server: 172.64.229.21
-  port: 443
-  uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
-  alterId: 0
-  cipher: auto
-  udp: true
-  network: ws
-  ws-opts:
-    path: /ws
-    headers:
-      Host: vmess.lbw666.dpdns.org
-  tls: true
-  servername: vmess.lbw666.dpdns.org
-- name: CA+Cloudflare 4
-  type: vmess
-  server: 104.17.136.198
+  server: 172.66.203.67
   port: 443
   uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
   alterId: 0
@@ -69,6 +33,51 @@ proxies:
       Host: vmess.lbw666.dpdns.org
   tls: true
   servername: vmess.lbw666.dpdns.org
+- name: CA+Cloudflare 3
+  type: vmess
+  server: 104.17.0.1
+  port: 2083
+  uuid: ac251237-576f-40c8-a543-554960c958b1
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+  ws-opts:
+    path: /or3
+    headers:
+      Host: or3.sfacg.uk
+  tls: true
+  servername: or3.sfacg.uk
+- name: CA+Cloudflare 4
+  type: vmess
+  server: 104.17.136.198
+  port: 443
+  uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: vmess.lbw666.dpdns.org
+  tls: true
+  servername: vmess.lbw666.dpdns.org
+- name: CA+Cloudflare 5
+  type: vmess
+  server: 104.19.166.218
+  port: 443
+  uuid: a9f9a249-1832-424c-9820-57af75107acc
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+  ws-opts:
+    path: /ferdolans7
+    headers:
+      Host: assumption-universities-weekend-litigation.trycloudflare.com
+  tls: true
+  servername: assumption-universities-weekend-litigation.trycloudflare.com
 - name: US+Fastly
   type: trojan
   server: ipfast.kingmna.com
