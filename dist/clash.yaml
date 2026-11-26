@@ -3,70 +3,9 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: CA+CloudFlare
-  type: trojan
-  server: 188.114.96.0
-  port: 2096
-  password: vP!XvZBNdw.e*ddSgmH!
-  udp: true
-  network: ws
-  ws-opts:
-    path: /tr/lqCTAonDgcErIZylZuNyy?ed=2560
-    headers:
-      Host: n0q4xprj2d4x4prcq29l8jkczd0.pages.dev
-  tls: true
-  sni: N0Q4xprJ2d4X4pRCQ29l8JkcZd0.paGES.DeV
-  client-fingerprint: chrome
-  alpn:
-  - http/1.1
 - name: CA+Cloudflare
   type: vmess
-  server: 104.19.166.218
-  port: 443
-  uuid: a9f9a249-1832-424c-9820-57af75107acc
-  alterId: 0
-  cipher: auto
-  udp: true
-  network: ws
-  ws-opts:
-    path: /ferdolans7
-    headers:
-      Host: assumption-universities-weekend-litigation.trycloudflare.com
-  tls: true
-  servername: assumption-universities-weekend-litigation.trycloudflare.com
-- name: CA+Cloudflare 2
-  type: trojan
-  server: 104.19.45.195
-  port: 443
-  password: pH[]S[Bh:_:D6T4k
-  udp: true
-  network: ws
-  ws-opts:
-    path: /trsVu9Ualb1DOfGjpw
-    headers:
-      Host: ''
-  tls: true
-  sni: AZaDneT-692.PagEs.DEv
-  client-fingerprint: chrome
-- name: CA+Cloudflare 3
-  type: trojan
-  server: russia.com
-  port: 443
-  password: bpb-trojan
-  udp: true
-  network: ws
-  ws-opts:
-    path: /tr?ed=2560
-    headers:
-      Host: ''
-  tls: true
-  sni: kargar001.pages.dev
-  client-fingerprint: chrome
-  alpn:
-  - h3
-- name: CA+Cloudflare 4
-  type: vmess
-  server: 172.66.0.1
+  server: 104.27.0.1
   port: 443
   uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
   alterId: 0
@@ -76,9 +15,56 @@ proxies:
   ws-opts:
     path: /ws
     headers:
-      Host: ''
+      Host: vmess.lbw666.dpdns.org
   tls: true
   servername: vmess.lbw666.dpdns.org
+- name: CA+Cloudflare 2
+  type: trojan
+  server: dry-snowflake-b29f.vpnetwork3567.workers.dev
+  port: 443
+  password: 963A4918-A630-29DA-A873-093CDF8AD784
+  udp: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: dry-snowflake-b29f.vpnetwork3567.workers.dev
+  tls: true
+  sni: dry-snowflake-b29f.vpnetwork3567.workers.dev
+  client-fingerprint: chrome
+  alpn:
+  - http/1.1
+- name: CA+Cloudflare 3
+  type: trojan
+  server: ukr.stealthtunnel.com
+  port: 443
+  password: 963A4918-A630-29DA-A873-093CDF8AD784
+  udp: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: ukr.stealthtunnel.com
+  tls: true
+  sni: ukr.stealthtunnel.com
+  client-fingerprint: ios
+  alpn:
+  - http/1.1
+- name: CA+Cloudflare 4
+  type: vmess
+  server: based-wiki-located-individual.trycloudflare.com
+  port: 443
+  uuid: 2a4d24bf-367a-4951-bfe6-50c7a0bdb5ea
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+  ws-opts:
+    path: /2a4d24bf-367a-4951-bfe6-50c7a0bdb5ea-vm
+    headers:
+      Host: based-wiki-located-individual.trycloudflare.com
+  tls: true
+  servername: based-wiki-located-individual.trycloudflare.com
 - name: CA+Cloudflare 5
   type: vmess
   server: 104.21.7.133
@@ -93,13 +79,14 @@ proxies:
     headers:
       Host: vmess.lbw666.dpdns.org
   tls: true
+  servername: vmess.lbw666.dpdns.org
 - name: CA+Cloudflare 6
   type: vmess
-  server: 104.17.77.77
+  server: 104.21.57.84
   port: 8443
   uuid: 60441548-b68e-43b2-8191-e3b884be4b3c
   alterId: 0
-  cipher: none
+  cipher: auto
   udp: true
   network: ws
   ws-opts:
@@ -108,82 +95,42 @@ proxies:
       Host: v2ray1.dozapp.xyz
   tls: true
   servername: v2ray1.dozapp.xyz
-- name: CA+Cloudflare 7
-  type: trojan
-  server: dimu-vz7e.ezaccess1717bbf.workers.dev
-  port: 8443
-  password: 53035563-df32-463c-b23a-5e14535793b2
-  udp: true
-  network: ws
-  ws-opts:
-    path: /stream/DEVCOP/5e14535793b2?ed=2048
-    headers:
-      Host: dimu-vz7e.ezaccess1717bbf.workers.dev
-  tls: true
-  sni: dimu-vz7e.ezaccess1717bbf.workers.dev
-  client-fingerprint: ios
-- name: TH+Alibaba.com Singapore E-Commerce Private
+- name: DE+xTom
   type: vmess
-  server: 8.213.211.160
-  port: 18565
-  uuid: 853a251f-de85-40cc-84a6-ab8748c7258c
+  server: de.zhou-yufan.com
+  port: 443
+  uuid: f38e591d-d13a-4c30-9763-6be3ad65f3ec
   alterId: 0
   cipher: auto
   udp: true
-  network: raw
-- name: US+AWS CloudFront
-  type: trojan
-  server: sg.privatemailfiles.com
-  port: 443
-  password: 963A4918-A630-29DA-A873-093CDF8AD784
-  udp: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: sg.privatemailfiles.com
   tls: true
-  sni: sg.privatemailfiles.com
-  alpn:
-  - http/1.1
-- name: US+CGI GLOBAL
-  type: trojan
-  server: 31.56.229.22
-  port: 8443
-  password: YektaCloud
+- name: SG+Alibaba.com Singapore E-Commerce Private
+  type: vmess
+  server: 8.222.172.146
+  port: 54327
+  uuid: 8a3d03bc-9b35-43b4-d901-c8531f2bbc6d
+  alterId: 0
+  cipher: auto
   udp: true
   network: ws
   ws-opts:
-    path: /YektaCloud----@YektaCloud----@YektaCloud----@YektaCloud----@YektaCloud----@YektaCloud----@YektaCloud----@YektaCloud----@YektaCloud----@YektaCloud----@YektaCloud----@YektaCloud----@YektaCloud----@YektaCloud----@YektaCloud----@YektaCloud
+    path: /pages
     headers:
       Host: ''
-  tls: true
-  client-fingerprint: firefox
-  skip-cert-verify: true
-  alpn:
-  - http/1.1
-  - h3
-  - h2
-- name: US+Hostlelo
+- name: TW+Chunghwa Telecom Co.
   type: trojan
-  server: gary04.1688848.xyz
-  port: 57137
-  password: nCKwZIFgBH
-  udp: true
-- name: US+RingCentral
-  type: trojan
-  server: 66.81.247.250
-  port: 8443
-  password: weueHhlxEXGl
+  server: 122.118.135.139
+  port: 443
+  password: c2cc86b4-4481-4807-ac9e-24e2d7041248
   udp: true
   network: ws
   ws-opts:
-    path: /?ed=2560
+    path: /images
     headers:
-      Host: raYAn12-0fy4yUmd-t3.rAYan-12.wOrkers.deV
+      Host: zephyr-tw1.bpca2026.top
   tls: true
-  sni: raYAn12-0fy4yUmd-t3.rAYan-12.wOrkers.deV
-  client-fingerprint: chrome
+  sni: zephyr-tw1.bpca2026.top
+  client-fingerprint: android
 proxy-groups:
 - name: 自动选择
   type: url-test
