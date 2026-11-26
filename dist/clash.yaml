@@ -3,67 +3,23 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
+- name: CA+CloudFlare
+  type: trojan
+  server: 188.114.96.0
+  port: 2096
+  password: vP!XvZBNdw.e*ddSgmH!
+  udp: true
+  network: ws
+  ws-opts:
+    path: /tr/lqCTAonDgcErIZylZuNyy?ed=2560
+    headers:
+      Host: n0q4xprj2d4x4prcq29l8jkczd0.pages.dev
+  tls: true
+  sni: N0Q4xprJ2d4X4pRCQ29l8JkcZd0.paGES.DeV
+  client-fingerprint: chrome
+  alpn:
+  - http/1.1
 - name: CA+Cloudflare
-  type: vmess
-  server: chatgpt.com
-  port: 8443
-  uuid: 60441548-b68e-43b2-8191-e3b884be4b3c
-  alterId: 0
-  cipher: auto
-  udp: true
-  network: ws
-  ws-opts:
-    path: /lMnsZUN4/
-    headers:
-      Host: v2ray1.dozapp.xyz
-  tls: true
-  servername: v2ray1.dozapp.xyz
-- name: CA+Cloudflare 2
-  type: vmess
-  server: 172.66.203.67
-  port: 443
-  uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
-  alterId: 0
-  cipher: auto
-  udp: true
-  network: ws
-  ws-opts:
-    path: /ws?ed=2048
-    headers:
-      Host: vmess.lbw666.dpdns.org
-  tls: true
-  servername: vmess.lbw666.dpdns.org
-- name: CA+Cloudflare 3
-  type: vmess
-  server: 104.17.0.1
-  port: 2083
-  uuid: ac251237-576f-40c8-a543-554960c958b1
-  alterId: 0
-  cipher: auto
-  udp: true
-  network: ws
-  ws-opts:
-    path: /or3
-    headers:
-      Host: or3.sfacg.uk
-  tls: true
-  servername: or3.sfacg.uk
-- name: CA+Cloudflare 4
-  type: vmess
-  server: 104.17.136.198
-  port: 443
-  uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
-  alterId: 0
-  cipher: auto
-  udp: true
-  network: ws
-  ws-opts:
-    path: /ws
-    headers:
-      Host: vmess.lbw666.dpdns.org
-  tls: true
-  servername: vmess.lbw666.dpdns.org
-- name: CA+Cloudflare 5
   type: vmess
   server: 104.19.166.218
   port: 443
@@ -78,21 +34,156 @@ proxies:
       Host: assumption-universities-weekend-litigation.trycloudflare.com
   tls: true
   servername: assumption-universities-weekend-litigation.trycloudflare.com
-- name: US+Fastly
+- name: CA+Cloudflare 2
   type: trojan
-  server: ipfast.kingmna.com
+  server: 104.19.45.195
   port: 443
-  password: lDU6Jpl4nSXA-x4sWmb1LQ
+  password: pH[]S[Bh:_:D6T4k
   udp: true
   network: ws
   ws-opts:
-    path: /TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER-TELEGRAM-@NUFiLTER
+    path: /trsVu9Ualb1DOfGjpw
     headers:
-      Host: copy_az_channel_NUFiLTER_17i.global.ssl.fastly.net.
+      Host: ''
   tls: true
-  sni: cdn.akamai.steamstatic.com
+  sni: AZaDneT-692.PagEs.DEv
   client-fingerprint: chrome
+- name: CA+Cloudflare 3
+  type: trojan
+  server: russia.com
+  port: 443
+  password: bpb-trojan
+  udp: true
+  network: ws
+  ws-opts:
+    path: /tr?ed=2560
+    headers:
+      Host: ''
+  tls: true
+  sni: kargar001.pages.dev
+  client-fingerprint: chrome
+  alpn:
+  - h3
+- name: CA+Cloudflare 4
+  type: vmess
+  server: 172.66.0.1
+  port: 443
+  uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+  ws-opts:
+    path: /ws
+    headers:
+      Host: ''
+  tls: true
+  servername: vmess.lbw666.dpdns.org
+- name: CA+Cloudflare 5
+  type: vmess
+  server: 104.21.7.133
+  port: 443
+  uuid: 0cf6d970-3f1d-4aae-a989-92a8f76ae3db
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+  ws-opts:
+    path: /ws?ed=2048
+    headers:
+      Host: vmess.lbw666.dpdns.org
+  tls: true
+- name: CA+Cloudflare 6
+  type: vmess
+  server: 104.17.77.77
+  port: 8443
+  uuid: 60441548-b68e-43b2-8191-e3b884be4b3c
+  alterId: 0
+  cipher: none
+  udp: true
+  network: ws
+  ws-opts:
+    path: /lMnsZUN4/
+    headers:
+      Host: v2ray1.dozapp.xyz
+  tls: true
+  servername: v2ray1.dozapp.xyz
+- name: CA+Cloudflare 7
+  type: trojan
+  server: dimu-vz7e.ezaccess1717bbf.workers.dev
+  port: 8443
+  password: 53035563-df32-463c-b23a-5e14535793b2
+  udp: true
+  network: ws
+  ws-opts:
+    path: /stream/DEVCOP/5e14535793b2?ed=2048
+    headers:
+      Host: dimu-vz7e.ezaccess1717bbf.workers.dev
+  tls: true
+  sni: dimu-vz7e.ezaccess1717bbf.workers.dev
+  client-fingerprint: ios
+- name: TH+Alibaba.com Singapore E-Commerce Private
+  type: vmess
+  server: 8.213.211.160
+  port: 18565
+  uuid: 853a251f-de85-40cc-84a6-ab8748c7258c
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: raw
+- name: US+AWS CloudFront
+  type: trojan
+  server: sg.privatemailfiles.com
+  port: 443
+  password: 963A4918-A630-29DA-A873-093CDF8AD784
+  udp: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: sg.privatemailfiles.com
+  tls: true
+  sni: sg.privatemailfiles.com
+  alpn:
+  - http/1.1
+- name: US+CGI GLOBAL
+  type: trojan
+  server: 31.56.229.22
+  port: 8443
+  password: YektaCloud
+  udp: true
+  network: ws
+  ws-opts:
+    path: /YektaCloud----@YektaCloud----@YektaCloud----@YektaCloud----@YektaCloud----@YektaCloud----@YektaCloud----@YektaCloud----@YektaCloud----@YektaCloud----@YektaCloud----@YektaCloud----@YektaCloud----@YektaCloud----@YektaCloud----@YektaCloud
+    headers:
+      Host: ''
+  tls: true
+  client-fingerprint: firefox
   skip-cert-verify: true
+  alpn:
+  - http/1.1
+  - h3
+  - h2
+- name: US+Hostlelo
+  type: trojan
+  server: gary04.1688848.xyz
+  port: 57137
+  password: nCKwZIFgBH
+  udp: true
+- name: US+RingCentral
+  type: trojan
+  server: 66.81.247.250
+  port: 8443
+  password: weueHhlxEXGl
+  udp: true
+  network: ws
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: raYAn12-0fy4yUmd-t3.rAYan-12.wOrkers.deV
+  tls: true
+  sni: raYAn12-0fy4yUmd-t3.rAYan-12.wOrkers.deV
+  client-fingerprint: chrome
 proxy-groups:
 - name: 自动选择
   type: url-test
